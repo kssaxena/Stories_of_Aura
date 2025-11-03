@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
-import bg from "../../assets/Nssrie.jpg";
 
 export const HeroParallax = ({ products }) => {
   const firstRow = products.slice(0, 5);
@@ -42,7 +41,7 @@ export const HeroParallax = ({ products }) => {
   return (
     <div
       ref={ref}
-      className="h-[310vh] py-0 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] inset-shadow-sm shadow-black bg-gradient-to-b from-neutral-400 to-black"
+      className="h-[310vh] py-0 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] inset-shadow-sm shadow-black bg-gradient-to-b from-black to-neutral-800"
     >
       <Header />
       <motion.div
@@ -89,10 +88,10 @@ export const HeroParallax = ({ products }) => {
 export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="text-2xl md:text-5xl font-bold dark:text-black">
+      <h1 className="text-2xl md:text-5xl font-bold dark:text-white">
         Curating experiences for properties that deserve more than attention
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-black">
+      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-white">
         In a world overflowing with content, genuine experiences stand out.
         That’s why we focus on curating emotions, not just aesthetics. We
         combine creativity, strategy, and authenticity to help properties find
