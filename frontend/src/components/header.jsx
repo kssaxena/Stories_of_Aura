@@ -41,14 +41,14 @@ const Header = () => {
       href: "#",
     },
     {
-      title: "Works",
+      title: "Gallery",
       icon: (
         <GrWorkshop className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },
     {
-      title: "Blogs",
+      title: "Aura Experience",
       icon: (
         <LiaBlogSolid className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
