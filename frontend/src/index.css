@@ -13,6 +13,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Agile";
+  src: url("/fonts/agile.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 .font-montserrat {
   font-family: "Montserrat";
@@ -22,4 +28,11 @@
 }
 .font-blanka {
   font-family: "Blanka", sans-serif;
+}
+.font-agile {
+  font-family: "Agile", sans-serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
