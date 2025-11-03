@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
+import { TypewriterEffectSmooth } from "./typewriter-effect";
 
 export const HeroParallax = ({ products }) => {
   const firstRow = products.slice(0, 5);
@@ -84,12 +85,26 @@ export const HeroParallax = ({ products }) => {
     </div>
   );
 };
+const words = [
+  { text: "Curating" },
+  { text: "experiences" },
+  { text: "for" },
+  { text: "properties" },
+  { text: "that" },
+  { text: "deserve" },
+  { text: "more" },
+  { text: "than" },
+  {
+    text: "attention",
+    className: "text-[#DF3F33] uppercase",
+  },
+];
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
+    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
       <h1 className="text-2xl md:text-5xl font-bold dark:text-white">
-        Curating experiences for properties that deserve more than attention
+        <TypewriterEffectSmooth words={words} />
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-white">
         In a world overflowing with content, genuine experiences stand out.
@@ -113,7 +128,7 @@ export const ProductCard = ({ product, translate }) => {
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative shrink-0"
+      className="group/product h-96 w-[30rem] relative shrink-0 "
     >
       <a
         href={product.link}
