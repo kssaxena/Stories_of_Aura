@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence, spring } from "framer-motion";
-import { IconHome, IconMenu2 } from "@tabler/icons-react";
-import { GrWorkshop } from "react-icons/gr";
-import { LiaBlogSolid } from "react-icons/lia";
-import { RiFileList2Fill } from "react-icons/ri";
-import { IoMdContacts } from "react-icons/io";
-import { MdContacts } from "react-icons/md";
+import { NavLinks } from "../constants/ComponentConstants";
 import { FloatingDock } from "./ui/floating-dock";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import { IconMenu2 } from "@tabler/icons-react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,51 +27,6 @@ const Header = () => {
       setIsScrolled(window.scrollY > 100);
     }
   };
-
-  const links = [
-    {
-      title: "Home",
-      icon: (
-        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Gallery",
-      icon: (
-        <GrWorkshop className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Aura Experience",
-      icon: (
-        <LiaBlogSolid className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Packages",
-      icon: (
-        <RiFileList2Fill className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "About Us",
-      icon: (
-        <IoMdContacts className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Contact",
-      icon: (
-        <MdContacts className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-  ];
 
   return (
     <div className="flex items-end justify-center w-full min-h-screen pb-20 bg-transparent absolute">
@@ -112,7 +63,7 @@ const Header = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.6, type: spring }}
             >
-              <FloatingDock items={links} />
+              <FloatingDock items={NavLinks} />
               {isExpanded && (
                 <button
                   onClick={handleToggle}

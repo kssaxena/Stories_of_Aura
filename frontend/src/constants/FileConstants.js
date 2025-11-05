@@ -85,3 +85,19 @@ export const products = [
   },
 ];
 
+export const moreLinks = [
+  { name: "Carreers", path: "/carriers" },
+  { name: "Privacy Policy", path: "/privacy-policy" },
+  { name: "Aura Experience", path: "/aura-experience" },
+  { name: "Terms of Services", path: "/terms-of-services" },
+  { name: "Terms & Conditions", path: "/terms-and-conditions" },
+];
+
+export const quickLinks = [
+  { name: "Home", path: "/" },
+  { name: "Gallery", path: "/gallery" },
+  { name: "Aura Experience", path: "/aura-experience" },
+  { name: "Packages", path: "/packages" },
+  { name: "About Us", path: "/about-us" },
+  { name: "Contact Us", path: "/contact-us" },
+];

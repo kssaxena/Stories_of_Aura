@@ -36,3 +36,15 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* Global Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: smooth;
+}
+
+/* Optional: improve mouse wheel feel */
+body {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
