@@ -101,3 +101,16 @@ export const quickLinks = [
   { name: "About Us", path: "/about-us" },
   { name: "Contact Us", path: "/contact-us" },
 ];
+
+export const w1 = [
+  { text: "Driving" },
+  { text: "your" },
+  { text: "brand's" },
+  { text: "growth" },
+];
+
+export const w2 = [
+  { text: "Through" },
+  { text: "digital", className: "text-[#DF3F33] uppercase" },
+  { text: "innovation", className: "text-[#DF3F33] uppercase" },
+];
