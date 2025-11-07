@@ -28,7 +28,7 @@ export const Timeline = ({ data }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto lg:pt-20 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-neutral-400 max-w-4xl font-agile tracking-widest">
+        <h2 className="text-7xl mb-4 text-black dark:text-neutral-400 max-w-4xl font-agile tracking-widest border-b border-[#FA2C37]">
           What we do...
         </h2>
         {/* <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
@@ -49,7 +49,7 @@ export const Timeline = ({ data }) => {
                 transition={{ duration: 0.5 }}
                 className="hidden md:block text-xl md:pl-20 md:text-5xl font-agile text-neutral-500 dark:text-neutral-500 "
               >
-                {item.title}{" "}
+                {item.title}
                 <span className="flex items-center justify-start gap-4 text-red-500">
                   <span>{item.icon}</span>
                   <span>{item.icon2}</span>
@@ -70,14 +70,14 @@ export const Timeline = ({ data }) => {
           style={{
             height: height + "px",
           }}
-          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
+          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]  z-20"
         >
           <motion.div
             style={{
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-red-600 to-red-900  from-[0%] via-[10%] rounded-full h-fit lg:h-full"
+            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-red-600 to-red-900  from-[0%] via-[10%] rounded-full h-fit lg:h-full z-20"
           />
         </div>
       </div>

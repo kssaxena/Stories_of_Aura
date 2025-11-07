@@ -7,6 +7,7 @@ import { IoMdMail } from "react-icons/io";
 import { GoArrowUpRight } from "react-icons/go";
 import { moreLinks, quickLinks } from "../constants/FileConstants";
 import { socialLinksFooter } from "../constants/ComponentConstants";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Footer = () => {
   const [isActive, setIsActive] = useState(false);
@@ -20,7 +21,7 @@ const Footer = () => {
                 Your story <br /> our strategy <br />
                 <span className="text-[#DF3F33] font-semibold"> together</span>
               </h1>
-              <button>
+              <button onClick={() => setIsActive(true)}>
                 <GoArrowUpRight className="text-9xl text-[#DF3F33] hover:text-white hover:bg-[#DF3F33] duration-300 ease-in-out rounded-full px-10 py-10" />
               </button>
             </div>
@@ -74,11 +75,19 @@ const Footer = () => {
           </div>
         </section>
       </div>
-      {isActive && (
-        <div className="fixed top-0 left-0 w-full h-screen backdrop-blur-2xl z-50 justify-center items-center flex">
-          <EnquiryForm onCancel={() => setIsActive(false)} />
-        </div>
-      )}
+      <AnimatePresence>
+        {isActive && (
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 100 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ type: "spring", duration: 0.5, ease: "easeInOut" }}
+            className="fixed top-0 left-0 w-full h-screen backdrop-blur-3xl z-50 justify-center items-center flex"
+          >
+            <EnquiryForm onCancel={() => setIsActive(false)} />
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="absolute -top-1/2 left-0 grayscale-75 opacity-40 object-bottom">
         <img
           src={`https://ik.imagekit.io/krb6qpkbp/Footer/footer_bg.jpg?updatedAt=1762334189213`}

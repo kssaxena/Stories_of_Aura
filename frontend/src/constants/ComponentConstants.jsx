@@ -71,6 +71,12 @@ export const socialLinksFooter = [
     path: "#",
     className: "text-white",
   },
+  {
+    name: "WhatsApp",
+    icon: <IoLogoWhatsapp />,
+    path: "#",
+    className: "text-green-500",
+  },
 ];
 
 export const NavLinks = [

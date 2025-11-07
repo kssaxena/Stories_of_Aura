@@ -16,7 +16,7 @@ export const TypewriterEffectSmooth = ({
   words = [],
   className,
   cursorClassName,
-  charDelay = 0.03,
+  charDelay = 0.02,
   replayOnView = false,
 }) => {
   const ref = useRef(null);
