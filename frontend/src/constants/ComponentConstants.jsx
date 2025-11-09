@@ -12,6 +12,7 @@ import { MdContacts } from "react-icons/md";
 import { FaChartLine, FaCode, FaPalette, FaPenFancy } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { FaDiamond } from "react-icons/fa6";
+import { GrGallery } from "react-icons/gr";
 
 export const socialLinks = [
   {
@@ -85,42 +86,42 @@ export const NavLinks = [
     icon: (
       <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "/",
+    path: "/",
   },
   {
     title: "Gallery",
     icon: (
-      <GrWorkshop className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      <GrGallery className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#",
+    path: "/aura-gallery",
   },
   {
     title: "Aura Experience",
     icon: (
       <LiaBlogSolid className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#",
+    path: "/aura-experience",
   },
   {
     title: "Packages",
     icon: (
       <RiFileList2Fill className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#",
+    path: "#",
   },
   {
     title: "About Us",
     icon: (
       <IoMdContacts className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#",
+    path: "#",
   },
   {
     title: "Contact",
     icon: (
       <MdContacts className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#",
+    path: "#",
   },
 ];
 
