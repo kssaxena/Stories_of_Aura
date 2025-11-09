@@ -108,7 +108,7 @@ export const Header = () => {
   });
 
   // Parallax movement
-  const y = useTransform(scrollYProgress, [0, 1], ["2000px", "-2000px"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["1000px", "-1000px"]);
   const opacity = useTransform(
     scrollYProgress,
     [0, 0.2, 0.8, 1],

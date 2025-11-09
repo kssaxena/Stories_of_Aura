@@ -13,6 +13,7 @@ import {
   useSpring,
   useTransform,
 } from "motion/react";
+import { Link, useNavigate, useParams } from "react-router";
 
 import { useRef, useState } from "react";
 
@@ -52,13 +53,13 @@ const FloatingDockMobile = ({ items, className }) => {
                 }}
                 transition={{ delay: (items.length - 1 - idx) * 0.05 }}
               >
-                <a
-                  href={item.href}
+                <Link
+                  to={item.path}
                   key={item.title}
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
                 >
                   <div className="h-4 w-4">{item.icon}</div>
-                </a>
+                </Link>
               </motion.div>
             ))}
           </motion.div>
@@ -103,7 +104,7 @@ const FloatingDockDesktop = ({ items, className }) => {
   );
 };
 
-function IconContainer({ mouseX, title, icon, href }) {
+function IconContainer({ mouseX, title, icon, path }) {
   let ref = useRef(null);
 
   let distance = useTransform(mouseX, (val) => {
@@ -147,7 +148,7 @@ function IconContainer({ mouseX, title, icon, href }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <a href={href}>
+    <Link to={path}>
       <motion.div
         ref={ref}
         style={{ width, height }}
@@ -174,6 +175,6 @@ function IconContainer({ mouseX, title, icon, href }) {
           {icon}
         </motion.div>
       </motion.div>
-    </a>
+    </Link>
   );
 }
