@@ -49,7 +49,52 @@ body {
   scroll-behavior: smooth;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+  padding: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #18181b;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1d2739;
+  border-radius: 1px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1d2739;
+}
+
+/* Disable browser's native smooth behavior — we'll control it */
+html {
+  scroll-behavior: auto !important;
+}
+
+/* Recommended Lenis base styles */
 html.lenis,
 html.lenis body {
   height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none; /* smoother while scrolling over iframes */
+}
+
+/* (Optional) Stop rubber-banding on touch devices if you prefer */
+body {
+  overscroll-behavior: none;
 }

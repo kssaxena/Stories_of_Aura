@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router";
 import Footer from "./components/footer";
 import Header from "./components/header";
-import SmoothScrollProvider from "./components/hooks/smoothScrollProvider";
 import Home from "./pages/home/page";
 import AuraExperience from "./pages/aura-experience/page";
 import Gallery from "./pages/aura-gallery/page";
