@@ -1,8 +1,16 @@
-import React from "react";
-// import bg from "../assets/background1.jpg";
-// import bg from "../../assets/background.png";
 import bg from "../../assets/Nssrie.jpg";
-import { motion, spring, useMotionValue, useTransform } from "framer-motion";
+import {
+  motion,
+  spring,
+  useMotionValue,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+import {
+  socialLinks,
+  socialLinksFooter,
+} from "../../constants/ComponentConstants";
+import { useRef } from "react";
 
 const HeroSection = () => {
   // subtle mouse-follow parallax (for house/video & foreground elements)
@@ -10,8 +18,8 @@ const HeroSection = () => {
   const mouseY = useMotionValue(0);
 
   // transform values to make gentle movement
-  const translateX = useTransform(mouseX, [-5000, 5000], [-12, 12]);
-  const translateY = useTransform(mouseY, [-5000, 5000], [-8, 8]);
+  const translateX = useTransform(mouseX, [-300, 300], [-12, 12]);
+  const translateY = useTransform(mouseY, [-300, 300], [-8, 8]);
   const floatY = useTransform(mouseY, [-300, 300], [8, -8]);
 
   function handleMouseMove(e) {
@@ -20,6 +28,7 @@ const HeroSection = () => {
     mouseX.set(e.clientX - halfW);
     mouseY.set(e.clientY - halfH);
   }
+
   return (
     <div
       className=" w-full h-screen overflow-hidden bg-black text-white flex flex-col justify-start items-center gap-4 py-60"
@@ -27,7 +36,6 @@ const HeroSection = () => {
     >
       {/* Background image */}
       <motion.img
-        // src="https://ik.imagekit.io/krb6qpkbp/Home/Nssrie.jpg?updatedAt=1762030099539"
         src={bg}
         alt="Glasshaven Modern House"
         className="w-full h-full object-cover opacity-80 absolute top-0 left-0"
@@ -59,7 +67,7 @@ const HeroSection = () => {
           of{" "}
         </motion.span>
         <motion.span
-          className="font-blanka tracking-[2rem]"
+          className="font-blanka tracking-[2rem] -translate-y-2"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, type: spring }}
@@ -67,47 +75,32 @@ const HeroSection = () => {
           aura
         </motion.span>
       </motion.h1>
-      {/* Bottom text */}
-      {/* <div className="w-fit text-center text-black">
-        <h2 className="tracking-wider mix-blend-color-burn font-bold drop-shadow-2xl">
-          Curating experiences for properties that deserve more than attention
-        </h2>
-      </div> */}
 
       <div className="">
-        <p className="font-samarkan text-5xl mix-blend-difference">
+        <motion.p className="font-samarkan text-5xl mix-blend-difference text-gray-200">
           Documenting Indian Hospitality{" "}
-        </p>
+        </motion.p>
       </div>
-      {/* <motion.h1
-        initial={{ opacity: 0, y: -50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, type: spring }}
-        className="
-          absolute lg:top-1/3 top-1/4 w-full md:text-[5.5rem] lg:text-[6rem] text-[4rem] font-semibold uppercase tracking-widest leading-none text-white mix-blend-overlay flex justify-center items-center"
-      >
-        stories of aura
-      </motion.h1> */}
 
-      {/* Navbar */}
-      {/* <nav
-        className="
-          absolute top-14 right-16 flex space-x-10 text-[13px] tracking-widest 
-          uppercase font-medium z-30
-        "
-      >
-        {["Home", "Works", "Blogs", "Packages", "About us", "Contacts"].map(
-          (item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="hover:text-gray-300 transition-colors duration-200"
+      {/* Social bar */}
+      <div className="absolute top-10 right-16">
+        <div className="flex gap-5 p-2 justify-center items-center ">
+          {socialLinks.map((social, index) => (
+            <motion.a
+              key={social.title}
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: index * 0.1, type: spring }}
+              className={`hover:scale-110 transition text-3xl ${social.className} cursor-pointer`}
+              title={social.name}
+              href={social.path}
+              target="blank"
             >
-              {item}
-            </a>
-          )
-        )}
-      </nav> */}
+              {social.icon}
+            </motion.a>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

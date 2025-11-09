@@ -1,132 +1,110 @@
-import { FaDiamond } from "react-icons/fa6";
-import { BackgroundBeams } from "../../components/ui/background-beams";
 import { HeroParallax } from "../../components/ui/hero-parallax";
-import { StickyScroll } from "../../components/ui/sticky-scroll-reveal";
 import { TextHoverEffect } from "../../components/ui/text-hover-effect";
-import { products } from "../../constants/FileConstants";
+import { journeyMapData, products, w1, w2 } from "../../constants/FileConstants";
+import { Timeline } from "../../components/ui/timeline";
+import { TimeLineData } from "../../constants/ComponentConstants";
 import {
-  FaChartLine,
-  FaCode,
-  FaExternalLinkSquareAlt,
-  FaGithub,
-  FaPalette,
-  FaPenFancy,
-} from "react-icons/fa";
+  AnimatePresence,
+  motion,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+import { useRef, useState } from "react";
+import bg from "../../assets/Nssrie.jpg";
+import TypewriterEffectSmooth from "../../components/ui/typewriter-effect";
+import JourneyMap from "../../components/ui/journeyMap";
+import EnquiryForm from "../../components/enquiry-form";
 
 const IntroSection = () => {
-  const cards = [
-    // 1️⃣ Reputation Management
-    {
-      title: "Reputation Management",
-      tagline: "Building and Protecting Brand Trust",
-      icon: <FaDiamond />,
-      description:
-        "Reputation Management is the strategic process of shaping and maintaining a positive perception of a brand, business, or individual. It involves monitoring public sentiment, managing feedback, and addressing negative reviews or misinformation swiftly. Effective reputation management helps build trust, credibility, and long-term customer loyalty. In the digital age, where opinions spread rapidly across social media and review platforms, reputation management plays a crucial role in preserving brand integrity and ensuring consistent positive engagement with audiences.",
-      content: (
-        <div className="flex justify-center items-center relative w-full h-full">
-          <div className="shadow-2xl shadow-black/50 bg-transparent w-full h-full">
-            <img
-              src="https://ik.imagekit.io/krb6qpkbp/Home/ChatGPT%20Image%20Nov%202,%202025,%2012_42_59%20AM.png?updatedAt=1762025244496"
-              className="object-center object-contain w-full h-full rounded-2xl"
-            />
-          </div>
-        </div>
-      ),
-    },
+  const ref1 = useRef(null);
+  const [isActive, setIsActive] = useState(false);
 
-    // 2️⃣ Performance Marketing
-    {
-      title: "Performance Marketing",
-      tagline: "Data Driven Marketing",
-      icon: <FaChartLine />,
-      description:
-        "Performance Marketing focuses on achieving measurable business outcomes through targeted campaigns and analytics-based strategies. From paid ads and lead generation to conversion tracking, every action is monitored and optimized to deliver maximum ROI. This approach ensures that marketing spend directly translates into performance metrics such as sales, engagement, or leads. By combining creativity with data, performance marketing empowers brands to make smarter, results-oriented decisions and achieve sustainable growth.",
-      content: (
-        <div className="flex justify-center items-center relative w-full h-full">
-          <div className="shadow-2xl shadow-black/50 bg-transparent w-full h-full">
-            <img
-              src="https://ik.imagekit.io/krb6qpkbp/Home/ChatGPT%20Image%20Nov%202,%202025,%2012_50_58%20AM.png?updatedAt=1762025244562"
-              className="object-center object-contain w-full h-full rounded-2xl"
-            />
-          </div>
-        </div>
-      ),
-    },
+  // Scroll for first motion section
+  const { scrollYProgress: scrollY1 } = useScroll({
+    target: ref1,
+    offset: ["start end", "end start"],
+  });
 
-    // 3️⃣ Web Development & Coding
-    {
-      title: "Web Development & Coding",
-      tagline: "Building Seamless Digital Experiences",
-      icon: <FaCode />,
-      description:
-        "Web Development and Coding bring ideas to life through technology, enabling interactive, scalable, and high-performance web applications. From front-end design and responsive interfaces to robust back-end logic, every component contributes to an intuitive user experience. Skilled developers use frameworks, APIs, and optimized architectures to build digital platforms that perform seamlessly across devices — ensuring speed, security, and reliability in every line of code.",
-      content: (
-        <div className="flex justify-center items-center relative w-full h-full">
-          <div className="shadow-2xl shadow-black/50 bg-transparent w-full h-full">
-            <img
-              src="https://ik.imagekit.io/krb6qpkbp/Home/ChatGPT%20Image%20Nov%202,%202025,%2012_51_55%20AM.png?updatedAt=1762025244515"
-              className="object-center object-contain w-full h-full rounded-2xl"
-            />
-          </div>
-        </div>
-      ),
-    },
+  // // Scroll for second motion section
+  // const { scrollYProgress: scrollY2 } = useScroll({
+  //   target: ref2,
+  //   offset: ["start end", "end start"],
+  // });
 
-    // 4️⃣ Branding & Designing
-    {
-      title: "Branding & Designing",
-      tagline: "Crafting Visual Identity",
-      icon: <FaPalette />,
-      description:
-        "Branding & Designing combine art and strategy to create meaningful visual identities that connect emotionally with audiences. From logos and typography to color palettes and brand guidelines, design defines how a brand communicates its personality and values. Effective branding goes beyond aesthetics — it builds recognition, trust, and loyalty by ensuring every design element aligns with the brand’s message and long-term vision.",
-      content: (
-        <div className="flex justify-center items-center relative w-full h-full">
-          <div className="shadow-2xl shadow-black/50 bg-transparent w-full h-full">
-            <img
-              src="https://ik.imagekit.io/krb6qpkbp/Home/ChatGPT%20Image%20Nov%202,%202025,%2012_57_50%20AM.png?updatedAt=1762025285836"
-              className="object-center object-contain w-full h-full rounded-2xl"
-            />
-          </div>
-        </div>
-      ),
-    },
+  // Parallax movement
+  const y = useTransform(scrollY1, [0, 1], ["200px", "-200px"]);
+  // const y2 = useTransform(scrollY2, [0, 1], ["500px", "-500px"]);
 
-    // 5️⃣ Content Production
-    {
-      title: "Content Production",
-      tagline: "Creating Impactful Stories That Engage",
-      icon: <FaPenFancy />,
-      description:
-        "Content Production is the creative process of developing engaging and high-quality material across different media formats. Whether it’s video, writing, photography, or design, content production transforms ideas into stories that inform, inspire, and entertain. In today’s across different media formats. Whether it’s video, writing, photography, or design, content production transforms ideas into stories that inform, inspire, and entertain. In today’s  digital landscape, well-produced content not only drives engagement but also strengthens brand presence, helping businesses connect authentically with their target audience.",
-      content: (
-        <div className="flex justify-center items-center relative w-full h-full">
-          <div className="shadow-2xl shadow-black/50 bg-transparent w-full h-full">
-            <img
-              src="https://ik.imagekit.io/krb6qpkbp/Home/ChatGPT%20Image%20Nov%202,%202025,%2012_57_47%20AM.png?updatedAt=1762025285811"
-              className="object-center object-contain w-full h-full rounded-2xl"
-            />
-          </div>
-        </div>
-      ),
-    },
-  ];
+  const opacity = useTransform(scrollY1, [0, 0.2, 0.8, 1], [0, 1, 1, 0.8]);
+
+  
 
   return (
     <div>
       <HeroParallax products={products} />
-      <div className="h-fit w-full rounded-md bg-neutral-800 relative flex flex-col items-center justify-center py-20">
-        <div className="w-full z-10">
+      <div className="h-fit w-full rounded-md bg-neutral-800 relative flex flex-col items-center justify-center pt-20">
+        <div className="absolute top-0 h-full bg-gradient-t from-black to-transparent">
+          <img src={bg} className="sticky top-0 opacity-30 " />
+        </div>
+        <div className="absolute inset-0 bg-black/50 w-full" />
+
+        {/* First Parallax Section */}
+        <motion.div
+          ref={ref1}
+          style={{ y, opacity }}
+          transition={{ type: "spring", stiffness: 60, damping: 25 }}
+          className="w-full z-10"
+        >
           <TextHoverEffect text="Stories of AURA" />
-          <h1 className="flex justify-center items-center gap-2 text-4xl tracking-widest">
-            <span>Driving Your Brand's Growth </span>
-            <span> Through Digital Innovation</span>
+          <h1 className="flex flex-col font-medium justify-center items-center gap-2 text-7xl">
+            <span>
+              <TypewriterEffectSmooth words={w1} />{" "}
+            </span>
+            <span>
+              <TypewriterEffectSmooth words={w2} />
+            </span>
           </h1>
+        </motion.div>
+
+        {/* Second Parallax Section */}
+        <motion.div
+          // ref={ref2}
+          // style={{ y: y2, opacity }}
+          // transition={{ type: "spring", stiffness: 60, damping: 25 }}
+          className="z-10"
+        >
+          <Timeline data={TimeLineData} />
+        </motion.div>
+        <div className="w-full z-10 py-40">
+          <h2 className="text-7xl mb-4 text-black dark:text-neutral-300 max-w-4xl font-agile tracking-widest border-b border-[#FA2C37] ml-40">
+            How we do these...!
+          </h2>
+          <JourneyMap data={journeyMapData} />
+          <h2 className="text-6xl mb-4 text-black dark:text-neutral-300 max-w-4xl font-agile tracking-widest ml-40">
+            Let's{" "}
+            <span
+              className="text-[#FA2C37]/80 hover:underline cursor-pointer uppercase"
+              onClick={() => setIsActive(true)}
+            >
+              collaborate
+            </span>{" "}
+            !
+          </h2>
         </div>
-        <div className="z-10">
-          <StickyScroll content={cards} />
-        </div>
-        <BackgroundBeams />
       </div>
+      <AnimatePresence>
+        {isActive && (
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 100 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ type: "spring", duration: 1, ease: "easeInOut" }}
+            className="fixed top-0 left-0 w-full h-screen backdrop-blur-3xl z-50 justify-center items-center flex"
+          >
+            <EnquiryForm onCancel={() => setIsActive(false)} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
