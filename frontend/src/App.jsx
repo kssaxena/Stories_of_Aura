@@ -4,6 +4,7 @@ import Header from "./components/header";
 import SmoothScrollProvider from "./components/hooks/smoothScrollProvider";
 import Home from "./pages/home/page";
 import AuraExperience from "./pages/aura-experience/page";
+import Gallery from "./pages/aura-gallery/page";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/aura-gallery" element={<Gallery />} />
         <Route path="/aura-experience" element={<AuraExperience />} />
       </Routes>
       <Footer />
