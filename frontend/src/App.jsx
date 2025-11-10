@@ -4,6 +4,7 @@ import Header from "./components/header";
 import Home from "./pages/home/page";
 import AuraExperience from "./pages/aura-experience/page";
 import Gallery from "./pages/aura-gallery/page";
+import AuraPackage from "./pages/aura-packages/page";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/aura-gallery" element={<Gallery />} />
         <Route path="/aura-experience" element={<AuraExperience />} />
+        <Route path="/aura-packages" element={<AuraPackage />} />
       </Routes>
       <Footer />
     </div>

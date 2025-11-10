@@ -16,7 +16,7 @@
 import React from "react";
 
 const Button = ({ Label = "", onClick, className = "", type }) => {
-  const letters = Label.toUpperCase().split("");
+  const letters = Label.toUpperCase().split("_"); // for typewritter effect remove the underscore 
 
   return (
     <button
