@@ -25,7 +25,7 @@ const PricingTable = ({ packageData }) => {
             )}
 
             {/* DISCOUNT TAG */}
-            <div
+            {/* <div
               className={`
                 absolute top-4 right-4 text-xs font-semibold px-3 py-1 rounded-full
                 ${
@@ -36,23 +36,20 @@ const PricingTable = ({ packageData }) => {
               `}
             >
               {pkg.badge}
-            </div>
+            </div> */}
 
             {/* Title */}
             <h2 className="text-2xl font-bold mb-1">{pkg.name}</h2>
             <p className=" mb-4">{pkg.subtitle}</p>
 
             {/* Price */}
-            <div className="text-4xl font-extrabold mb-2">{pkg.price}</div>
-            <div className="text-sm  mb-6">{pkg.occasional}</div>
+            {/* <div className="text-4xl font-extrabold mb-2">{pkg.price}</div> */}
+            {/* <div className="text-sm  mb-6">{pkg.occasional}</div> */}
 
             {/* Button */}
-            <div className="w-full mb-6 flex justify-center items-center">
-              <Button Label="Collaborate with us" />
-            </div>
 
             {/* Features */}
-            <div className="space-y-4 border-t pt-6">
+            <div className="lg:space-y-4 space-y-2 border-t pt-6">
               {pkg.features.map((feature, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span className="text-green-600 font-bold">✓</span>
@@ -62,6 +59,9 @@ const PricingTable = ({ packageData }) => {
                   </p>
                 </div>
               ))}
+            </div>
+            <div className="w-full mt-6 flex justify-center items-center">
+              <Button Label="Contact Us" />
             </div>
           </div>
         ))}

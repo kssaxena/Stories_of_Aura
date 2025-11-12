@@ -14,7 +14,7 @@ import {
   useTransform,
 } from "motion/react";
 import { Link, useNavigate, useParams } from "react-router";
-
+import { IconMenu2 } from "@tabler/icons-react";
 import { useRef, useState } from "react";
 
 export const FloatingDock = ({ items, desktopClassName, mobileClassName }) => {
@@ -26,15 +26,33 @@ export const FloatingDock = ({ items, desktopClassName, mobileClassName }) => {
   );
 };
 
-const FloatingDockMobile = ({ items, className }) => {
+export const FloatingDockMobile = ({ items, className }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className={cn("relative block hidden", className)}>
+    <div
+      className={cn(
+        "fixed block lg:hidden md:hidden right-0 w-full flex justify-end items-start p-10 z-40 ",
+        className
+      )}
+    >
       <AnimatePresence>
         {open && (
           <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            exit={{
+              opacity: 0,
+              y: 10,
+              transition: {
+                delay: 0.05,
+              },
+            }}
+            transition={{ delay: 0.1 }}
             layoutId="nav"
-            className="absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2"
+            className="absolute top-full mb-2 flex flex-col gap-2 w-3/4 p-5 backdrop-blur-3xl rounded-xl"
           >
             {items.map((item, idx) => (
               <motion.div
@@ -52,13 +70,18 @@ const FloatingDockMobile = ({ items, className }) => {
                   },
                 }}
                 transition={{ delay: (items.length - 1 - idx) * 0.05 }}
+                className="w-full"
               >
                 <Link
                   to={item.path}
                   key={item.title}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
+                  onClick={() => setOpen(false)}
+                  className="flex h-16 w-full items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900 shadow-2xl"
                 >
-                  <div className="h-4 w-4">{item.icon}</div>
+                  <div className="h-4 w-fit flex justify-evenly items-center gap-2 truncate">
+                    {item.icon}
+                    {item.title}
+                  </div>
                 </Link>
               </motion.div>
             ))}
@@ -67,9 +90,9 @@ const FloatingDockMobile = ({ items, className }) => {
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-800"
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-black shadow-2xl shadow-white"
       >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+        <IconMenu2 className="h-5 w-5 text-neutral-500 dark:text-neutral-400 shadow-2xl " />
       </button>
     </div>
   );

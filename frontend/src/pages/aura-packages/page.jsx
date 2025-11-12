@@ -1,3 +1,4 @@
+import React, { useRef } from "react";
 import {
   AnimatePresence,
   motion,
@@ -5,41 +6,20 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { useRef, useState } from "react";
-import AccordionCard from "../../components/ui/accordion-card";
-import { AccordionData } from "../../constants/FileConstants";
+import { PackageData } from "../../constants/ComponentConstants";
+import PricingTable from "../../components/ui/pricingTable";
 
-const AuraExperience = () => {
+const AuraPackage = () => {
   const ref = useRef(null);
-  const ref2 = useRef(null);
-  const ref3 = useRef(null);
-
-  // Scroll for first motion section
   const { scrollYProgress: scrollY1 } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
-
-  // Scroll for second motion section
-  const { scrollYProgress: scrollY2 } = useScroll({
-    target: ref2,
-    offset: ["start end", "end start"],
-  });
-  const { scrollYProgress: scrollY3 } = useScroll({
-    target: ref3,
-    offset: ["start end", "end start"],
-  });
-
-  // Parallax movement
   const y = useTransform(scrollY1, [0, 1], ["1000px", "-1000px"]);
-  const y2 = useTransform(scrollY2, [0, 1], ["1000px", "-1000px"]);
-  const y3 = useTransform(scrollY2, [0, 1], ["500px", "-500px"]);
 
   const opacity = useTransform(scrollY1, [0, 0.2, 0.8, 1], [0, 1, 1, 0.8]);
-  const opacity2 = useTransform(scrollY2, [0, 0.2, 0.8, 1], [0, 1, 1, 0.8]);
-  const opacity3 = useTransform(scrollY2, [0, 0.2, 0.8, 1], [0, 1, 1, 0.8]);
   return (
-    <div className="flex justify-center items-center flex-col pb-20">
+    <div>
       <motion.div
         ref={ref}
         style={{ y, opacity }}
@@ -52,7 +32,7 @@ const AuraExperience = () => {
           transition={{ duration: 1, type: spring }}
           className="font-agile lg:text-5xl md:text-5xl text-[40px] uppercase border-b border-red-500 lg:px-20 md:px-20"
         >
-          Aura experience
+          Aura package
         </motion.h1>
         <h1 className="lg:text-5xl md:text-4xl flex flex-col lg:flex-row text-[28px] lg:gap-5 gap-1 justify-center items-center">
           <motion.span
@@ -87,34 +67,9 @@ const AuraExperience = () => {
           </span>
         </h1>
       </motion.div>
-      <motion.div
-        ref={ref2}
-        style={{ y2, opacity2 }}
-        transition={{ type: "spring", stiffness: 60, damping: 100 }}
-        className="w-full relative"
-      >
-        {/* accordion section  */}
-        {AccordionData.map((item, index) => (
-          <AccordionCard
-            key={index}
-            logo={item.logo}
-            propertyImage={item.propertyImage}
-            title={item.title}
-            description={item.description}
-          />
-        ))}
-        <div className="absolute top-0 left-0 z-0 opacity-5 grayscale-75 w-full h-full bg-cyan-500">
-          <motion.img
-            ref={ref3}
-            style={{ y3, opacity3 }}
-            transition={{ type: "spring", stiffness: 60, damping: 100 }}
-            className="object-cover sticky top-0 lg:block hidden"
-            src={`https://ik.imagekit.io/krb6qpkbp/Footer/footer_bg.jpg?updatedAt=1762334189213`}
-          />
-        </div>
-      </motion.div>
+      <PricingTable packageData={PackageData} />
     </div>
   );
 };
 
-export default AuraExperience;
+export default AuraPackage;

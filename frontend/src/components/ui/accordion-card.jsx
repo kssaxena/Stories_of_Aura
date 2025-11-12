@@ -1,5 +1,11 @@
-import { AnimatePresence, motion, spring } from "framer-motion";
-import { useState } from "react";
+import {
+  AnimatePresence,
+  motion,
+  spring,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+import { useRef, useState } from "react";
 
 const AccordionCard = ({ logo, propertyImage, title, description }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +17,15 @@ const AccordionCard = ({ logo, propertyImage, title, description }) => {
   const truncatedText =
     introText.split(" ").slice(0, wordLimit).join(" ") + "...";
   return (
-    <div className="h-fit w-full flex flex-col justify-center items-center">
-      <div className="flex flex-col justify-center items-center h-fit max-w-7xl border-t py-20 ">
-        <div className="flex justify-center items-center gap-10 w-full">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, type: spring, damping: 50, stiffness: 100 }}
+      className="h-fit w-full flex flex-col justify-start items-center relative"
+    >
+      <div className="flex flex-col justify-center items-center h-fit max-w-7xl z-10">
+        <div className="border h-[1px] border-white my-20 lg:w-full w-3/4"></div>
+        <div className="flex justify-center items-center lg:gap-10 w-full">
           {/* <img
             className="w-96 h-96 object-contain bg-neutral-950"
             src={logo}
@@ -23,7 +35,7 @@ const AccordionCard = ({ logo, propertyImage, title, description }) => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, type: "spring" }}
-            className="w-full h-[28rem] object-cover rounded-xl "
+            className="w-full lg:h-[28rem] object-cover rounded-xl "
             src={propertyImage}
             alt="Footer"
           />
@@ -34,18 +46,18 @@ const AccordionCard = ({ logo, propertyImage, title, description }) => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, type: "spring" }}
-            className="font-agile text-5xl uppercase py-10 text-center w-full"
+            className="font-agile lg:text-5xl text-[40px] uppercase py-10 text-center w-full"
           >
             {title}
           </motion.h1>
 
           {/* Accordion-Style Expandable Paragraph */}
-          <div className="max-w-5xl mx-auto text-lg text-gray-300 leading-relaxed">
+          <div className="max-w-5xl mx-auto text-lg text-gray-300 leading-relaxed lg:text-left px-5 lg:px-0 text-justify">
             <AnimatePresence initial={false}>
               {isOpen ? (
                 <motion.div
                   key="expanded"
-                  initial={{ height: 0, opacity: 0 }}
+                  initial={{ height: 0, opacity: 1 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
@@ -59,10 +71,22 @@ const AccordionCard = ({ logo, propertyImage, title, description }) => {
                     Array.isArray(description.sections) &&
                     description.sections.map((sec, i) => (
                       <div key={i} className="space-y-2">
-                        <h3 className="text-2xl font-semibold text-white">
+                        <motion.h3
+                          initial={{ opacity: 0, x: -50 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 1, delay: 0.3, type: spring }}
+                          className="text-2xl font-semibold text-white"
+                        >
                           {sec.heading}
-                        </h3>
-                        <p className="text-gray-300 text-base">{sec.text}</p>
+                        </motion.h3>
+                        <motion.p
+                          initial={{ opacity: 0, y: 50 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 1, delay: 0.2, type: spring }}
+                          className="text-gray-300 text-base px-5 indent-4"
+                        >
+                          {sec.text}
+                        </motion.p>
                       </div>
                     ))}
                 </motion.div>
@@ -112,7 +136,7 @@ const AccordionCard = ({ logo, propertyImage, title, description }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

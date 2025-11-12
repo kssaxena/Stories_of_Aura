@@ -28,17 +28,17 @@ const Gallery = () => {
         ref={ref}
         style={{ y, opacity }}
         transition={{ type: "spring", stiffness: 60, damping: 25 }}
-        className="flex justify-center items-center flex-col gap-20 h-screen"
+        className="flex justify-center items-center flex-col lg:gap-20 gap-10 h-screen px-5"
       >
         <motion.h1
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, type: spring }}
-          className="font-agile text-5xl uppercase border-b border-red-500 px-20"
+          className="font-agile text-5xl uppercase border-b border-red-500 lg:px-20 md:px-20"
         >
           Aura gallery
         </motion.h1>
-        <h1 className="text-5xl">
+        <h1 className="lg:text-5xl md:text-4xl flex flex-col lg:flex-row text-[28px] lg:gap-5 gap-1 justify-center items-center">
           <motion.span
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -55,15 +55,15 @@ const Gallery = () => {
             "Dikhega toh bikega"
           </motion.span>
         </h1>
-        <h1 className="w-[58rem] text-center text-[22px]">
+        <h1 className="lg:w-[58rem] text-center lg:text-[22px]">
           Visibility is everything. For the past three years, we’ve made it our
           mission to ensure that the brands we work with are not only visible in
           the market, but memorable in the minds of their audience. We don’t
           settle for attention, we build lasting recall.
         </h1>
-        <h1 className="text-3xl uppercase font-semibold flex flex-col justify-center items-center">
+        <h1 className="lg:text-3xl md:text-3xl uppercase font-semibold flex flex-col justify-center items-center">
           Want to see ?{" "}
-          <span className="text-red-500 px-10 flex justify-center items-start gap-10">
+          <span className="text-red-500 lg:px-10 flex justify-center items-start gap-10">
             how and what we showcase
             <div className="relative w-[2px] h-20 overflow-hidden">
               <span className="absolute inset-0 bg-[#DF3F33] animate-bounce duration-1000"></span>
