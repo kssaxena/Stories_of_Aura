@@ -3,87 +3,174 @@ export const products = [
     title: "Cat",
     link: "https://mrsaxena.arisertradco.com",
     thumbnail:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC00984-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
     title: "Cat",
     link: "https://mrsaxena.arisertradco.com",
     thumbnail:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01093-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
     title: "Cat",
     link: "https://mrsaxena.arisertradco.com",
     thumbnail:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01102-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
     title: "Cat",
     link: "https://mrsaxena.arisertradco.com",
     thumbnail:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01394-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
     title: "Cat",
     link: "https://mrsaxena.arisertradco.com",
     thumbnail:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01050-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
     title: "Cat",
     link: "https://mrsaxena.arisertradco.com",
     thumbnail:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01097-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
     title: "Cat",
     link: "https://mrsaxena.arisertradco.com",
     thumbnail:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01386-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
     title: "Cat",
     link: "https://mrsaxena.arisertradco.com",
     thumbnail:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01079-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
     title: "Cat",
     link: "https://mrsaxena.arisertradco.com",
     thumbnail:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC00979-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
     title: "Cat",
     link: "https://mrsaxena.arisertradco.com",
     thumbnail:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC00995-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
     title: "Cat",
     link: "https://mrsaxena.arisertradco.com",
     thumbnail:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01089-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
     title: "Cat",
     link: "https://mrsaxena.arisertradco.com",
     thumbnail:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01110-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
     title: "Cat",
     link: "https://mrsaxena.arisertradco.com",
     thumbnail:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC00974-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
     title: "Cat",
     link: "https://mrsaxena.arisertradco.com",
     thumbnail:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01054-HDR.jpg?tr=f-auto,q-70,w-800",
   },
 ];
+
+// export const HeroParallaxImages = [
+//   {
+//     title: "Cat",
+//     link: "https://mrsaxena.arisertradco.com",
+//     thumbnail:
+//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+//   },
+//   {
+//     title: "Cat",
+//     link: "https://mrsaxena.arisertradco.com",
+//     thumbnail:
+//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+//   },
+//   {
+//     title: "Cat",
+//     link: "https://mrsaxena.arisertradco.com",
+//     thumbnail:
+//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+//   },
+//   {
+//     title: "Cat",
+//     link: "https://mrsaxena.arisertradco.com",
+//     thumbnail:
+//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+//   },
+//   {
+//     title: "Cat",
+//     link: "https://mrsaxena.arisertradco.com",
+//     thumbnail:
+//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+//   },
+//   {
+//     title: "Cat",
+//     link: "https://mrsaxena.arisertradco.com",
+//     thumbnail:
+//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+//   },
+//   {
+//     title: "Cat",
+//     link: "https://mrsaxena.arisertradco.com",
+//     thumbnail:
+//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+//   },
+//   {
+//     title: "Cat",
+//     link: "https://mrsaxena.arisertradco.com",
+//     thumbnail:
+//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+//   },
+//   {
+//     title: "Cat",
+//     link: "https://mrsaxena.arisertradco.com",
+//     thumbnail:
+//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+//   },
+//   {
+//     title: "Cat",
+//     link: "https://mrsaxena.arisertradco.com",
+//     thumbnail:
+//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+//   },
+//   {
+//     title: "Cat",
+//     link: "https://mrsaxena.arisertradco.com",
+//     thumbnail:
+//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+//   },
+//   {
+//     title: "Cat",
+//     link: "https://mrsaxena.arisertradco.com",
+//     thumbnail:
+//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+//   },
+//   {
+//     title: "Cat",
+//     link: "https://mrsaxena.arisertradco.com",
+//     thumbnail:
+//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+//   },
+//   {
+//     title: "Cat",
+//     link: "https://mrsaxena.arisertradco.com",
+//     thumbnail:
+//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+//   },
+// ];
 
 export const moreLinks = [
   { name: "Carreers", path: "/carriers" },
@@ -131,7 +218,7 @@ export const enquiryFormInputs = [
 export const journeyMapData = [
   {
     image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?tr=f-auto,q-70,w-800",
     title: "Step 1: Build Digital Credibility",
     texts: [
       {
@@ -143,11 +230,11 @@ export const journeyMapData = [
   },
   {
     image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?tr=f-auto,q-70,w-800",
     title: "Step 2: Strengthen Brand Trust",
     texts: [
       {
-        heading: "TBuilding and Protecting Brand Trust",
+        heading: "Building and Protecting Brand Trust",
         subtext:
           "Trust is the heartbeat of any brand that wants to grow beyond transactions. Building and protecting brand trust means being consistent, transparent, and genuine in every interaction, whether it's through design, communication, or customer experience. When audiences see reliability and authenticity, they feel emotionally connected to the brand. This connection transforms casual buyers into loyal advocates who amplify your presence organically. The stronger your brand trust, the greater your influence, and that influence is what drives both sustained visibility and measurable profitability.",
       },
@@ -155,7 +242,7 @@ export const journeyMapData = [
   },
   {
     image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?tr=f-auto,q-70,w-800",
     title: "Step 3: Optimize Measurable Growth",
     texts: [
       {
@@ -167,7 +254,7 @@ export const journeyMapData = [
   },
   {
     image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?tr=f-auto,q-70,w-800",
     title: "Step 4: Create Seamless Experiences",
     texts: [
       {
@@ -179,7 +266,7 @@ export const journeyMapData = [
   },
   {
     image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?tr=f-auto,q-70,w-800",
     title: "Step 5: Design for Recognition",
     texts: [
       {
@@ -191,7 +278,7 @@ export const journeyMapData = [
   },
   {
     image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?tr=f-auto,q-70,w-800",
     title: "Step 6: Tell Impactful Stories",
     texts: [
       {
@@ -359,5 +446,78 @@ export const pinterestUrls = [
     image:
       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/DSC_0382.jpg?updatedAt=1755274087405",
     propertyLink: "/property/royal-orchard",
+  },
+];
+
+export const pinterestUrlsDemo = [
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC00984-HDR.jpg?updatedAt=1762975524118",
+    propertyLink: "/property/cat",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01093-HDR.jpg?updatedAt=1762975524143",
+    propertyLink: "/property/cat",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01102-HDR.jpg?updatedAt=1762975524647",
+    propertyLink: "/property/cat",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01394-HDR.jpg?updatedAt=1762975524750",
+    propertyLink: "/property/cat",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01050-HDR.jpg?updatedAt=1762975524827",
+    propertyLink: "/property/cat",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01097-HDR.jpg?updatedAt=1762975524865",
+    propertyLink: "/property/cat",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01386-HDR.jpg?updatedAt=1762975524884",
+    propertyLink: "/property/cat",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01079-HDR.jpg?updatedAt=1762975524972",
+    propertyLink: "/property/cat",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC00979-HDR.jpg?updatedAt=1762975525028",
+    propertyLink: "/property/cat",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC00995-HDR.jpg?updatedAt=1762975525091",
+    propertyLink: "/property/cat",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01089-HDR.jpg?updatedAt=1762975525126",
+    propertyLink: "/property/cat",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01110-HDR.jpg?updatedAt=1762975525179",
+    propertyLink: "/property/cat",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC00974-HDR.jpg?updatedAt=1762975525290",
+    propertyLink: "/property/cat",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01054-HDR.jpg?updatedAt=1762975525290",
+    propertyLink: "/property/cat",
   },
 ];

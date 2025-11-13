@@ -28,7 +28,7 @@ export const Timeline = ({ data }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto lg:pt-20 md:px-8 lg:px-10">
-        <h2 className="text-7xl mb-4 text-black dark:text-neutral-400 max-w-4xl font-agile tracking-widest border-b border-[#FA2C37]">
+        <h2 className="lg:text-7xl md:text-5xl text-2xl mx-10 lg:mx-0 mb-4 text-black dark:text-neutral-400 max-w-4xl font-agile tracking-widest border-b border-[#FA2C37]">
           What we do...
         </h2>
         {/* <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
@@ -47,7 +47,7 @@ export const Timeline = ({ data }) => {
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5 }}
-                className="hidden md:block text-xl md:pl-20 md:text-5xl font-agile text-neutral-500 dark:text-neutral-500 "
+                className="hidden md:block text-xl md:pl-20 md:text-3xl lg:text-5xl font-agile text-neutral-500 dark:text-neutral-500 "
               >
                 {item.title}
                 <span className="flex items-center justify-start gap-4 text-red-500">
@@ -58,7 +58,7 @@ export const Timeline = ({ data }) => {
               </motion.h3>
             </div>
 
-            <div className="relative lg:pl-20 pl-12 pr-4 md:pl-4 w-full">
+            <div className="relative lg:pl-20 pl-14 pr-4 md:pl-4 w-full">
               <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500 font-agile">
                 {item.title}
               </h3>

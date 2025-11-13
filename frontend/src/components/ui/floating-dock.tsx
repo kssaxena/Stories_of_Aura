@@ -5,7 +5,7 @@
  **/
 
 import { cn } from "../../lib/utils";
-import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
+import { IoClose } from "react-icons/io5";
 import {
   AnimatePresence,
   motion,
@@ -17,10 +17,19 @@ import { Link, useNavigate, useParams } from "react-router";
 import { IconMenu2 } from "@tabler/icons-react";
 import { useRef, useState } from "react";
 
-export const FloatingDock = ({ items, desktopClassName, mobileClassName }) => {
+export const FloatingDock = ({
+  items,
+  desktopClassName,
+  mobileClassName,
+  onLinkClick,
+}) => {
   return (
     <>
-      <FloatingDockDesktop items={items} className={desktopClassName} />
+      <FloatingDockDesktop
+        items={items}
+        className={desktopClassName}
+        onLinkClick={onLinkClick}
+      />
       <FloatingDockMobile items={items} className={mobileClassName} />
     </>
   );
@@ -31,7 +40,7 @@ export const FloatingDockMobile = ({ items, className }) => {
   return (
     <div
       className={cn(
-        "fixed block lg:hidden md:hidden right-0 w-full flex justify-end items-start p-10 z-40 ",
+        "fixed block lg:hidden md:hidden right-0 w-full flex justify-end items-start px-5 py-4 z-40 ",
         className
       )}
     >
@@ -52,7 +61,7 @@ export const FloatingDockMobile = ({ items, className }) => {
             }}
             transition={{ delay: 0.1 }}
             layoutId="nav"
-            className="absolute top-full mb-2 flex flex-col gap-2 w-3/4 p-5 backdrop-blur-3xl rounded-xl"
+            className="absolute top-full mb-2 flex flex-col gap-2 w-[90%] p-5 backdrop-blur-3xl rounded-xl"
           >
             {items.map((item, idx) => (
               <motion.div
@@ -92,42 +101,42 @@ export const FloatingDockMobile = ({ items, className }) => {
         onClick={() => setOpen(!open)}
         className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-black shadow-2xl shadow-white"
       >
-        <IconMenu2 className="h-5 w-5 text-neutral-500 dark:text-neutral-400 shadow-2xl " />
+        {open && true ? (
+          <IoClose className="h-5 w-5 text-neutral-500 dark:text-neutral-400 shadow-2xl" />
+        ) : (
+          <IconMenu2 className="h-5 w-5 text-neutral-500 dark:text-neutral-400 shadow-2xl" />
+        )}
       </button>
     </div>
   );
 };
 
-const FloatingDockDesktop = ({ items, className }) => {
+const FloatingDockDesktop = ({ items, className, onLinkClick }) => {
   let mouseX = useMotionValue(Infinity);
   return (
     <motion.div
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        " w-fit  h-16 items-end gap-4 rounded-2xl bg-gray-50 px-4 pb-3 flex dark:bg-transparent",
+        "w-fit h-16 items-end gap-4 rounded-2xl bg-gray-50 px-4 pb-3 flex dark:bg-transparent",
         className
       )}
     >
       {items.map((item, index) => (
         <motion.div
           key={item.title}
-          initial={{ opacity: 0, y: -50 }} // Start hidden & lower
-          whileInView={{ opacity: 1, y: 0 }} // Animate in when visible
-          //   viewport={{ once: true, amount: 0.2 }} // Trigger once, when 20% visible
-          transition={{ duration: 0.5, delay: index * 0.1 }} // Small stagger
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
         >
-          <IconContainer mouseX={mouseX} {...item} />
+          <IconContainer mouseX={mouseX} {...item} onLinkClick={onLinkClick} />
         </motion.div>
       ))}
-      {/* {items.map((item) => (
-        <IconContainer mouseX={mouseX} key={item.title} {...item} />
-      ))} */}
     </motion.div>
   );
 };
 
-function IconContainer({ mouseX, title, icon, path }) {
+function IconContainer({ mouseX, title, icon, path, onLinkClick }) {
   let ref = useRef(null);
 
   let distance = useTransform(mouseX, (val) => {
@@ -171,7 +180,12 @@ function IconContainer({ mouseX, title, icon, path }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link to={path}>
+    <Link
+      to={path}
+      onClick={() => {
+        if (onLinkClick) onLinkClick(); // ← CLOSE THE NAVBAR!
+      }}
+    >
       <motion.div
         ref={ref}
         style={{ width, height }}

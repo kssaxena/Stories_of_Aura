@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
 import GalleryFeed from "../../components/ui/gallery-feed";
-import { pinterestUrls } from "../../constants/FileConstants";
+import {
+  pinterestUrls,
+  pinterestUrlsDemo,
+} from "../../constants/FileConstants";
 import {
   AnimatePresence,
   motion,
@@ -73,6 +76,10 @@ const Gallery = () => {
       </motion.div>
       <div className="h-fit">
         <GalleryFeed images={pinterestUrls} />
+        <h1 className="text-xl py-10 text-center">
+          👇 see this is how it will look if i only uploaded landscapes
+        </h1>
+        <GalleryFeed images={pinterestUrlsDemo} />
       </div>
     </div>
   );

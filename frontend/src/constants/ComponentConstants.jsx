@@ -2,7 +2,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { IoLogoWhatsapp } from "react-icons/io";
+import { IoLogoWhatsapp, IoMdMail } from "react-icons/io";
 import { IconHome } from "@tabler/icons-react";
 import { GrWorkshop } from "react-icons/gr";
 import { LiaBlogSolid } from "react-icons/lia";
@@ -18,13 +18,13 @@ export const socialLinks = [
   {
     name: "Instagram",
     icon: <AiFillInstagram />,
-    path: "#",
+    path: "https://www.instagram.com/storiesofaura?igsh=eDk4djZycm1vYWNr",
     className: "",
   },
   {
     name: "LinkedIn",
     icon: <IoLogoLinkedin />,
-    path: "#",
+    path: "https://www.linkedin.com/company/storiesofaura/",
     className: "",
   },
   {
@@ -42,8 +42,14 @@ export const socialLinks = [
   {
     name: "WhatsApp",
     icon: <IoLogoWhatsapp />,
-    path: "#",
+    path: "https://wa.me/918602395761",
     className: " ",
+  },
+  {
+    name: "Gmail",
+    icon: <IoMdMail />,
+    path: "https://mail.google.com/mail/?view=cm&fs=1&to=support@storiesofaura.com",
+    className: "",
   },
 ];
 
@@ -51,13 +57,13 @@ export const socialLinksFooter = [
   {
     name: "Instagram",
     icon: <AiFillInstagram />,
-    path: "#",
+    path: "https://www.instagram.com/storiesofaura?igsh=eDk4djZycm1vYWNr",
     className: "text-[#DF3F33]",
   },
   {
     name: "LinkedIn",
     icon: <IoLogoLinkedin />,
-    path: "#",
+    path: "https://www.linkedin.com/company/storiesofaura/",
     className: "text-blue-500",
   },
   {
@@ -75,8 +81,14 @@ export const socialLinksFooter = [
   {
     name: "WhatsApp",
     icon: <IoLogoWhatsapp />,
-    path: "#",
+    path: "https://wa.me/918602395761",
     className: "text-green-500",
+  },
+  {
+    name: "Gmail",
+    icon: <IoMdMail />,
+    path: "https://mail.google.com/mail/?view=cm&fs=1&to=support@storiesofaura.com",
+    className: "text-[#DF3F33]",
   },
 ];
 
@@ -107,7 +119,7 @@ export const NavLinks = [
     icon: (
       <RiFileList2Fill className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    path: "#",
+    path: "/aura-packages",
   },
   {
     title: "About Us",
@@ -132,7 +144,7 @@ export const TimeLineData = [
     icon: <FaDiamond />,
     content: (
       <div>
-        <h1 className="text-xl py-5">Building and Protecting Brand Trust</h1>
+        <h1 className="md:text-xl py-5">Building and Protecting Brand Trust</h1>
         <motion.p
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
@@ -159,7 +171,7 @@ export const TimeLineData = [
     icon: <FaChartLine />,
     content: (
       <div>
-        <h1 className="text-xl py-5">Data Driven Marketing</h1>
+        <h1 className="md:text-xl py-5">Data Driven Marketing</h1>
         <motion.p
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
@@ -185,7 +197,9 @@ export const TimeLineData = [
     icon: <FaCode />,
     content: (
       <div>
-        <h1 className="text-xl py-5">Building Seamless Digital Experiences</h1>
+        <h1 className="md:text-xl py-5">
+          Building Seamless Digital Experiences
+        </h1>
         <motion.p
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
@@ -210,7 +224,7 @@ export const TimeLineData = [
     icon: <FaPalette />,
     content: (
       <div>
-        <h1 className="text-xl py-5">Crafting Visual Identity</h1>
+        <h1 className="md:text-xl py-5">Crafting Visual Identity</h1>
         <motion.p
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
@@ -235,7 +249,9 @@ export const TimeLineData = [
     icon: <FaPenFancy />,
     content: (
       <div>
-        <h1 className="text-xl py-5">Creating Impactful Stories That Engage</h1>
+        <h1 className="md:text-xl py-5">
+          Creating Impactful Stories That Engage
+        </h1>
         <motion.p
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
@@ -254,3 +270,117 @@ export const TimeLineData = [
     ),
   },
 ];
+
+export const PackageData = [
+  {
+    name: "Starter",
+    badge: "30% OFF",
+    popular: false,
+    price: "₹ 25,000",
+    subtitle: "Best for small businesses",
+    occasional: "+ basic brand setup",
+    features: [
+      { label: "Photography & Videography", value: true },
+      { label: "SMM", value: true },
+      { label: "Branding", value: "Basic (onBoarding)" },
+      { label: "Creatives", value: "12 Creatives + 8 stories" },
+      { label: "Reels", value: "8 (generic)" },
+    ],
+  },
+  {
+    name: "Intermediate",
+    badge: "45% OFF",
+    popular: true,
+    price: "₹ 45,000",
+    subtitle: "Best for growing brands",
+    occasional: "+ premium brand setup",
+    features: [
+      { label: "Photography & Videography", value: true },
+      { label: "SMM", value: true },
+      { label: "Branding", value: "Add-on Overall" },
+      { label: "Creatives", value: "18 Creatives + 15 stories" },
+      { label: "Reels", value: "8 (generic) + 4 (exclusive)" },
+    ],
+  },
+  {
+    name: "Professional",
+    badge: "60% OFF",
+    popular: false,
+    price: "₹ 85,000",
+    subtitle: "Full-scale brand domination",
+    occasional: "+ complete brand suite",
+    features: [
+      { label: "Photography & Videography", value: true },
+      { label: "SMM", value: true },
+      { label: "Branding", value: "Website & maintenance overall" },
+      { label: "Creatives", value: "20 Creatives + Daily stories" },
+      { label: "Reels", value: "4 (generic) + 8 (exclusive)" },
+    ],
+  },
+];
+
+export const customPlanOptions = {
+  photography: [
+    "Monthly Photoshoot (4 Hours)",
+    "Monthly Photoshoot (8 Hours)",
+    "Bi-Weekly Photoshoot (4 Hours)",
+    "Quarterly Cinematic Shoot",
+    "Drone Shoot Add-on",
+    "Product Shoot (Studio Setup)",
+  ],
+
+  videography: [
+    "4K Cinematic Video (1 min)",
+    "4K Cinematic Video (3 mins)",
+    "Property Walkthrough Video",
+    "Interviews / Testimonials",
+    "Cinematic Short Ads",
+    "Event Videography Coverage",
+  ],
+
+  creatives: [
+    "12 Creatives + 8 Stories",
+    "18 Creatives + 15 Stories",
+    "28 Creatives + 20 Stories",
+    "Daily Stories (30 per month)",
+    "Carousel Posts (4 per month)",
+    "GIF/Animated Creatives (4 per month)",
+  ],
+
+  reels: [
+    "8 Generic Reels",
+    "8 Generic + 4 Exclusive Reels",
+    "4 Generic + 8 Exclusive Reels",
+    "Lifestyle Reels (4 per month)",
+    "Cinematic Reels (2 per month)",
+    "UGC Style Reels (4 per month)",
+  ],
+
+  smm: [
+    "Instagram Management",
+    "Facebook Page Management",
+    "YouTube Shorts Management",
+    "Hashtag Research",
+    "Ad-Copy Writing",
+    "Comment/DM Handling",
+    "Monthly Analytics Report",
+  ],
+
+  branding: [
+    "Basic Onboarding Branding Pack",
+    "Brand Messaging & Tone Setup",
+    "Brand Identity Revamp",
+    "Complete Brand Book",
+    "Website + Maintenance",
+    "Print Collateral Pack",
+  ],
+
+  addOns: [
+    "SEO Keyword Setup",
+    "Google Business Profile Optimization",
+    "Campaign Strategy + Execution",
+    "Influencer Outreach",
+    "Ad Running (Paid)",
+    "Motion Graphic Elements",
+  ],
+};

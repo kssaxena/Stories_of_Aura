@@ -42,7 +42,7 @@ export const HeroParallax = ({ products }) => {
   return (
     <motion.div
       ref={ref}
-      className="h-[310vh] py-0 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] inset-shadow-sm shadow-black bg-gradient-to-b from-black to-neutral-800"
+      className="xl:h-[290vh] 2xl:h-[260vh] md:h-[320vh] h-[300vh] py-0 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] inset-shadow-sm shadow-black bg-black"
     >
       <Header />
       <motion.div
@@ -108,7 +108,7 @@ export const Header = () => {
   });
 
   // Parallax movement
-  const y = useTransform(scrollYProgress, [0, 1], ["1000px", "-1000px"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["500px", "-500px"]);
   const opacity = useTransform(
     scrollYProgress,
     [0, 0.2, 0.8, 1],
@@ -119,12 +119,12 @@ export const Header = () => {
       ref={ref}
       style={{ y, opacity }}
       transition={{ type: "spring", stiffness: 60, damping: 25 }}
-      className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0"
+      className="max-w-7xl relative mx-auto lg:py-20 md:py-40 py-20 px-4 w-full left-0 top-0"
     >
-      <h1 className="text-2xl md:text-5xl font-bold dark:text-white">
+      <h1 className="text-2xl md:text-3xl font-bold dark:text-white px-2">
         <TypewriterEffectSmooth words={words} />
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-white text-justify leading-relaxed">
+      <p className="max-w-2xl text-sm md:text-xl mt-8 dark:text-white text-justify leading-relaxed">
         In a world overflowing with content, genuine experiences stand out.
         That’s why we focus on curating emotions, not just aesthetics. We
         combine creativity, strategy, and authenticity to help properties find
@@ -139,29 +139,38 @@ export const Header = () => {
 export const ProductCard = ({ product, translate }) => {
   return (
     <motion.div
-      style={{
-        x: translate,
-      }}
-      whileHover={{
-        y: -20,
-      }}
+      style={{ x: translate }}
+      whileHover={{ y: -20 }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative shrink-0 "
+      className="
+        group/product 
+        relative 
+        shrink-0 
+        h-60 w-[16rem]           /* Mobile size */
+        sm:h-72 sm:w-[20rem]     /* Small screens */
+        md:h-80 md:w-[24rem]     /* Medium screens */
+        lg:h-96 lg:w-[30rem]     /* Desktop */
+      "
     >
       <a
         href={product.link}
         target="blank"
-        className="block group-hover/product:shadow-2xl "
+        className="block group-hover/product:shadow-2xl"
       >
         <img
           src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-center absolute h-full w-full inset-0"
+          className="
+            object-cover object-center 
+            absolute inset-0 
+            h-full w-full
+          "
           alt={product.title}
         />
       </a>
+
+      {/* Hover overlay */}
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
+
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
         {product.title}
       </h2>

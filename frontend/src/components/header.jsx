@@ -29,8 +29,15 @@ const Header = () => {
     }
   };
 
+  // 🧩 Close menu when user clicks any navigation button
+  const handleLinkClick = () => {
+    setIsExpanded(false);
+    setIsScrolled(window.scrollY > 100);
+  };
+
   return (
     <div className="z-40">
+      {/* Desktop & Tablet View */}
       <div className="hidden lg:flex md:flex items-end justify-center w-full min-h-screen pb-20 bg-transparent absolute">
         <AnimatePresence>
           <motion.div
@@ -44,7 +51,7 @@ const Header = () => {
               right: isScrolled && !isExpanded ? 30 : "50%",
               translateX: isScrolled && !isExpanded ? 0 : "50%",
             }}
-            transition={{ duration: 1, ease: "easeInOut", type: spring }}
+            transition={{ duration: 0.8, ease: "easeInOut", type: spring }}
           >
             {/* When shrunk - show menu icon only */}
             {isScrolled && !isExpanded ? (
@@ -53,7 +60,7 @@ const Header = () => {
                 className="w-full h-full flex items-center justify-center text-white"
                 initial={{ opacity: 0, rotate: -90 }}
                 animate={{ opacity: 1, rotate: 0 }}
-                transition={{ duration: 1, type: spring }}
+                transition={{ duration: 0.6, type: spring }}
               >
                 <IconMenu2 size={30} />
               </motion.button>
@@ -63,9 +70,14 @@ const Header = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.6, type: spring }}
+                transition={{ duration: 0.5, type: spring }}
               >
-                <FloatingDock items={NavLinks} />
+                {/* 🧩 Pass the close function to FloatingDock */}
+                <FloatingDock
+                  items={NavLinks}
+                  onLinkClick={() => setIsExpanded(false)}
+                />
+
                 {isExpanded && (
                   <button
                     onClick={handleToggle}
@@ -79,11 +91,10 @@ const Header = () => {
           </motion.div>
         </AnimatePresence>
       </div>
+
+      {/* Mobile View */}
       <div className="flex z-40">
-        <FloatingDockMobile
-          items={NavLinks}
-          className={"bg-red-00 "}
-        />
+        <FloatingDockMobile items={NavLinks} className="bg-transparent" />
       </div>
     </div>
   );
