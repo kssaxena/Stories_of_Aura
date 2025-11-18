@@ -52,7 +52,8 @@ const AuraExperience = () => {
           transition={{ duration: 1, type: spring }}
           className="font-agile lg:text-5xl md:text-5xl text-[40px] uppercase border-b border-red-500 lg:px-20 md:px-20"
         >
-          Aura experience
+          {/* Aura experience */}
+          Stories of Growth & Transformation
         </motion.h1>
         <h1 className="lg:text-5xl md:text-4xl flex flex-col lg:flex-row text-[28px] lg:gap-5 gap-1 justify-center items-center">
           <motion.span
@@ -72,11 +73,21 @@ const AuraExperience = () => {
           </motion.span>
         </h1>
         <h1 className="lg:w-[58rem] text-center lg:text-[22px]">
+          Behind every growing brand lies a story worth telling. <br /> On this page,
+          we share real success stories from our partner hotels, their
+          challenges, transformations, and the creative journeys that turned
+          visions into thriving hospitality brands. Each case study highlights
+          how our tailored strategies in branding, design, and digital
+          storytelling helped properties elevate their presence, attract the
+          right guests, and grow with purpose. Dive in to see how we bring
+          hotels to life through the art of experience driven storytelling.
+        </h1>
+        {/* <h1 className="lg:w-[58rem] text-center lg:text-[22px]">
           Visibility is everything. For the past three years, we’ve made it our
           mission to ensure that the brands we work with are not only visible in
           the market, but memorable in the minds of their audience. We don’t
           settle for attention, we build lasting recall.
-        </h1>
+        </h1> */}
         <h1 className="lg:text-3xl md:text-3xl uppercase font-semibold flex lg:flex-row flex-col justify-center lg:items-start">
           Want to see how ?{" "}
           <span className="text-red-500 lg:px-10 flex justify-center items-start gap-10">
