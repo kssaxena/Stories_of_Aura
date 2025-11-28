@@ -12,7 +12,7 @@ import { AnimatePresence, motion } from "framer-motion";
 const Footer = () => {
   const [isActive, setIsActive] = useState(false);
   return (
-    <div className="relative lg:h-[26rem]  overflow-hidden flex justify-center items-end">
+    <div className="relative lg:h-[26rem]  overflow-hidden flex justify-center items-end bg-black">
       <div className="z-10 relative w-full">
         <section className="Upper-part pt-10 flex flex-col lg:flex-row md:flex-row lg:justify-evenly lg:items-end justify-center md:justify-evenly items-start px-5 z-40">
           <div className="flex flex-col lg:flex-row lg:justify-start lg:items-end items-start lg:gap-20 gap-5 ">

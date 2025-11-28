@@ -92,7 +92,7 @@ const PirateJourneyMap = ({ data }) => {
               <motion.div
                 // whileHover={{ scale: 0.5 }}
                 transition={{ type: "spring", stiffness: 200 }}
-                className={`flex flex-col md:flex-row items-center gap-8  shadow-lg rounded-2xl p-6 z-0 lg:w-[70%] ${
+                className={`flex flex-col md:flex-row items-center gap-8  rounded-2xl p-6 z-0 lg:w-[70%] ${
                   isLeft
                     ? "ml-0 lg:translate-x-[-5%]"
                     : "mr-0 lg:translate-x-[5%]"
