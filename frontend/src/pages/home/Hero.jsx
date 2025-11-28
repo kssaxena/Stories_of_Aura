@@ -38,18 +38,18 @@ const HeroSection = () => {
       <motion.img
         src={bg}
         alt="Glasshaven Modern House"
-        className="w-full lg:h-full h-full object-cover opacity-60 absolute top-0 left-0"
+        className="w-full lg:h-full h-full object-cover opacity-60 absolute top-0 left-0 "
       />
 
       {/* Semi-transparent overlay for tone */}
-      {/* <div className="absolute inset-0 bg-black/30 z-20 w-full" /> */}
+      <div className="absolute inset-0 bg-black/50 z-20 w-full" />
 
       <motion.h1
         // style={{ x: translateX, y: translateY }}
         // initial={{ scale: 0.98, opacity: 1 }}
         // animate={{ scale: 1, opacity: 1 }}
         // transition={{ type: "spring", stiffness: 120, damping: 16 }}
-        className="w-full md:text-[4rem] lg:text-[6rem] text-[32px] font-semibold uppercase lg:tracking-widest md:tracking-widest tracking-normal flex justify-center items-center lg:gap-16 md:gap-10 gap-5 select-none"
+        className="w-full md:text-[4rem] lg:text-[6rem] text-[32px] font-semibold uppercase lg:tracking-widest md:tracking-widest tracking-normal flex justify-center items-center lg:gap-16 md:gap-10 gap-5 select-none z-20"
       >
         <motion.span
           className="bg-clip-text text-white/80  md:tracking-widest lg:-translate-y-0 -translate-y-0 opacity-80"
@@ -84,7 +84,7 @@ const HeroSection = () => {
       </div>
 
       {/* Social bar */}
-      <div className="absolute top-10 w-full">
+      <div className="absolute top-10 w-full z-20">
         <div className="flex md:justify-end justify-start items-center px-10">
           <div className="flex md:gap-5 gap-2 justify-center items-center w-fit">
             {socialLinks.map((social, index) => (

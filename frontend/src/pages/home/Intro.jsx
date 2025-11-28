@@ -1,6 +1,7 @@
 import { HeroParallax } from "../../components/ui/hero-parallax";
 import { TextHoverEffect } from "../../components/ui/text-hover-effect";
 import {
+  bgImage,
   journeyMapData,
   products,
   w1,
@@ -47,8 +48,16 @@ const IntroSection = () => {
   // const opacity = useTransform(scrollY1, [0, 0.2, 0.8, 1], [0, 1, 1, 0.8]);
 
   return (
-    <div>
-      <HeroParallax products={products} />
+    <div className="relative">
+      <div className="relative">
+        <div className="absolute top-0 h-full w-full bg-black">
+          <img
+            src={bgImage}
+            className="sticky top-0 h-screen object-cover w-full opacity-40"
+          />
+        </div>
+        <HeroParallax products={products} />
+      </div>
       <div className="h-fit w-full rounded-md bg-black/90 relative flex flex-col items-center justify-center lg:pt-20 pt-10">
         <div className="absolute top-0 h-full bg-gradient-t from-black to-transparent hidden lg:block md:block">
           <img src={bg} className="sticky top-0 opacity-30 " />
