@@ -322,35 +322,6 @@ export const AccordionData = [
       ],
     },
   },
-  {
-    logo: "https://ik.imagekit.io/krb6qpkbp/Logo/Aura%20LOGO%20white.png?updatedAt=1762107262073",
-    propertyImage:
-      "https://ik.imagekit.io/krb6qpkbp/Footer/footer_bg.jpg?updatedAt=1762334189213",
-    title: "Grassfield Hotels & Resorts",
-    description: {
-      intro:
-        "When Stories of Aura partnered with Grassfield Hotels & Resorts, the vision was clear  to redefine how the brand’s properties were perceived through design, storytelling, and cinematic visual representation. With two unique destinations under its banner, The Valley by Grassfield and Grassfield Riviera Resort, the goal was to highlight the individuality of each property while preserving the harmony of the Grassfield brand. Our mission was to create visuals that not only showcased spaces but also translated the feeling of being there, turning hospitality into an experience guests could sense even before arrival.",
-
-      sections: [
-        {
-          heading: "The Challenge",
-          text: "Grassfield Hotels & Resorts had two distinct properties  The Valley, known for its serene hillside ambience, and Riviera, a sophisticated urban retreat blending modern design with luxury. Their digital presence lacked emotional depth and differentiation. The visuals were not capturing their unique stories or refined guest experience. We needed to reposition their identity to highlight each property’s personality while strengthening Grassfield’s overarching tone of warmth, comfort, and class.",
-        },
-        {
-          heading: "Our Approach",
-          text: "Our creative strategy began with immersion  understanding the brand, the spaces, and the guests they serve. We developed a dual visual narrative allowing each property to stand apart while reinforcing the Grassfield ethos. For The Valley, we focused on tranquility, natural charm, open spaces, soft light, and calm storytelling. For Riviera, we emphasized modern indulgence, energetic architecture, curated dining, vibrant lifestyle elements, and warm sophistication.",
-        },
-        {
-          heading: "The Outcome",
-          text: "The visual transformation reshaped how both properties engaged with digital audiences. The Valley saw increased organic engagement and direct inquiries from experiential travelers. Riviera gained traction for events and leisure bookings with stronger brand recall among urban guests. Together, both properties achieved a cohesive yet distinct identity rooted in Grassfield’s legacy.",
-        },
-        {
-          heading: "The Aura Impact",
-          text: "At Stories of Aura, we believe great hospitality deserves great storytelling. Our collaboration with Grassfield was not only about visuals  it was about crafting experiences that extend beyond the lens. Through The Valley and Riviera, we turned architecture into emotion and hospitality into narrative, shaping a visual presence that reflects the true soul of the Grassfield experience.",
-        },
-      ],
-    },
-  },
 ];
 
 export const pinterestUrls = [

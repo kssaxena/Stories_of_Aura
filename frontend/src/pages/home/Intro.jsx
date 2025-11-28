@@ -24,20 +24,20 @@ import EnquiryForm from "../../components/enquiry-form";
 const IntroSection = () => {
   // const ref1 = useRef(null);
   const [isActive, setIsActive] = useState(false);
-  useEffect(() => {
-    if (isActive) {
-      // Lock background scroll
-      document.body.style.overflow = "hidden";
-    } else {
-      // Re-enable scroll when popup closes
-      document.body.style.overflow = "";
-    }
+  // useEffect(() => {
+  //   if (isActive) {
+  //     // Lock background scroll
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     // Re-enable scroll when popup closes
+  //     document.body.style.overflow = "";
+  //   }
 
-    // Cleanup (in case component unmounts)
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isActive]);
+  //   // Cleanup (in case component unmounts)
+  //   return () => {
+  //     document.body.style.overflow = "";
+  //   };
+  // }, [isActive]);
 
   // const { scrollYProgress: scrollY1 } = useScroll({
   //   target: ref1,

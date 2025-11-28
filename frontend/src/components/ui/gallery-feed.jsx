@@ -7,7 +7,7 @@ const GalleryFeed = ({ images }) => {
   return (
     <div className="w-full px-4">
       {/* Masonry Grid */}
-      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4">
+      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4 pb-20">
         {images.map((item, index) => (
           <div
             key={index}
@@ -55,12 +55,12 @@ const GalleryFeed = ({ images }) => {
               />
 
               {/* View Property Button */}
-              <a
+              {/* <a
                 href={selected.propertyLink}
                 className="absolute top-4 right-4 bg-red-600 text-white px-5 py-2 text-sm font-semibold rounded-full shadow-md hover:bg-red-500 transition"
               >
                 View Property
-              </a>
+              </a> */}
 
               {/* Close Button */}
               <button

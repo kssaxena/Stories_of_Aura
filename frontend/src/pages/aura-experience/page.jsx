@@ -7,12 +7,11 @@ import {
 } from "framer-motion";
 import { useRef, useState } from "react";
 import AccordionCard from "../../components/ui/accordion-card";
-import { AccordionData } from "../../constants/FileConstants";
+import { AccordionData, bgImage } from "../../constants/FileConstants";
 
 const AuraExperience = () => {
   const ref = useRef(null);
   const ref2 = useRef(null);
-  const ref3 = useRef(null);
 
   // Scroll for first motion section
   const { scrollYProgress: scrollY1 } = useScroll({
@@ -25,26 +24,26 @@ const AuraExperience = () => {
     target: ref2,
     offset: ["start end", "end start"],
   });
-  const { scrollYProgress: scrollY3 } = useScroll({
-    target: ref3,
-    offset: ["start end", "end start"],
-  });
 
   // Parallax movement
   const y = useTransform(scrollY1, [0, 1], ["1000px", "-1000px"]);
   const y2 = useTransform(scrollY2, [0, 1], ["1000px", "-1000px"]);
-  const y3 = useTransform(scrollY2, [0, 1], ["500px", "-500px"]);
 
   const opacity = useTransform(scrollY1, [0, 0.2, 0.8, 1], [0, 1, 1, 0.8]);
   const opacity2 = useTransform(scrollY2, [0, 0.2, 0.8, 1], [0, 1, 1, 0.8]);
-  const opacity3 = useTransform(scrollY2, [0, 0.2, 0.8, 1], [0, 1, 1, 0.8]);
   return (
     <div className="flex justify-center items-center flex-col pb-20">
+      <div className="fixed top-0 left-0 h-full w-full bg-black">
+        <img
+          src={bgImage}
+          className="h-screen object-cover w-full opacity-40"
+        />
+      </div>
       <motion.div
         ref={ref}
         style={{ y, opacity }}
         transition={{ type: "spring", stiffness: 60, damping: 25 }}
-        className="flex justify-center items-center flex-col lg:gap-20 gap-10 h-screen px-5"
+        className="flex justify-center items-center flex-col lg:gap-20 gap-10 h-screen px-5 relative"
       >
         <motion.h1
           initial={{ opacity: 0, y: 10 }}
@@ -72,9 +71,9 @@ const AuraExperience = () => {
             "Dikhega toh bikega"
           </motion.span>
         </h1>
-        <h1 className="lg:w-[58rem] text-center lg:text-[22px]">
-          Behind every growing brand lies a story worth telling. <br /> On this page,
-          we share real success stories from our partner hotels, their
+        <h1 className="lg:w-[80rem] text-center lg:text-[22px]">
+          Behind every growing brand lies a story worth telling. <br /> On this
+          page, we share real success stories from our partner hotels, their
           challenges, transformations, and the creative journeys that turned
           visions into thriving hospitality brands. Each case study highlights
           how our tailored strategies in branding, design, and digital
@@ -114,15 +113,6 @@ const AuraExperience = () => {
             description={item.description}
           />
         ))}
-        <div className="absolute top-0 left-0 z-0 opacity-5 grayscale-75 w-full h-full bg-cyan-500">
-          <motion.img
-            ref={ref3}
-            style={{ y3, opacity3 }}
-            transition={{ type: "spring", stiffness: 60, damping: 100 }}
-            className="object-cover sticky top-0 lg:block hidden"
-            src={`https://ik.imagekit.io/krb6qpkbp/Footer/footer_bg.jpg?updatedAt=1762334189213`}
-          />
-        </div>
       </motion.div>
     </div>
   );
