@@ -1,3 +1,5 @@
+export const bgImage = `https://ik.imagekit.io/krb6qpkbp/universe-8153526.jpg?tr=f-auto,q-70`;
+
 export const products = [
   {
     title: "Cat",

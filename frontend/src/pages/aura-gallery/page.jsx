@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import GalleryFeed from "../../components/ui/gallery-feed";
 import {
+  bgImage,
   pinterestUrls,
   pinterestUrlsDemo,
 } from "../../constants/FileConstants";
@@ -24,9 +25,15 @@ const Gallery = () => {
   // Parallax movement
   const y = useTransform(scrollY1, [0, 1], ["1000px", "-1000px"]);
 
-  const opacity = useTransform(scrollY1, [0, 0.2, 0.8, 1], [0, 1, 1, 0.8]);
+  const opacity = useTransform(scrollY1, [0, 0.2, 0, 1], [0, 1, 1, 0.8]);
   return (
     <div>
+      <div className="fixed top-0 left-0 h-full w-full bg-black">
+        <img
+          src={bgImage}
+          className="h-screen object-cover w-full opacity-40"
+        />
+      </div>
       <motion.div
         ref={ref}
         style={{ y, opacity }}
@@ -74,12 +81,12 @@ const Gallery = () => {
           </span>
         </h1>
       </motion.div>
-      <div className="h-fit">
+      <div className="h-fit relative">
         <GalleryFeed images={pinterestUrls} />
-        <h1 className="text-xl py-10 text-center">
+        {/* <h1 className="text-xl py-10 text-center">
           👇 see this is how it will look if i only uploaded landscapes
         </h1>
-        <GalleryFeed images={pinterestUrlsDemo} />
+        <GalleryFeed images={pinterestUrlsDemo} /> */}
       </div>
     </div>
   );

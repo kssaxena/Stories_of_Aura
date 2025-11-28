@@ -45,12 +45,12 @@ export const socialLinks = [
     path: "https://wa.me/918602395761",
     className: " ",
   },
-  {
-    name: "Gmail",
-    icon: <IoMdMail />,
-    path: "https://mail.google.com/mail/?view=cm&fs=1&to=support@storiesofaura.com",
-    className: "",
-  },
+  // {
+  //   name: "Gmail",
+  //   icon: <IoMdMail />,
+  //   path: "https://mail.google.com/mail/?view=cm&fs=1&to=support@storiesofaura.com",
+  //   className: "",
+  // },
 ];
 
 export const socialLinksFooter = [
@@ -84,12 +84,12 @@ export const socialLinksFooter = [
     path: "https://wa.me/918602395761",
     className: "text-green-500",
   },
-  {
-    name: "Gmail",
-    icon: <IoMdMail />,
-    path: "https://mail.google.com/mail/?view=cm&fs=1&to=support@storiesofaura.com",
-    className: "text-[#DF3F33]",
-  },
+  // {
+  //   name: "Gmail",
+  //   icon: <IoMdMail />,
+  //   path: "https://mail.google.com/mail/?view=cm&fs=1&to=support@storiesofaura.com",
+  //   className: "text-[#DF3F33]",
+  // },
 ];
 
 export const NavLinks = [
