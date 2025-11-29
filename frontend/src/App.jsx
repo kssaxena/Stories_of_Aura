@@ -6,6 +6,7 @@ import AuraExperience from "./pages/aura-experience/page";
 import Gallery from "./pages/aura-gallery/page";
 import AuraPackage from "./pages/aura-packages/page";
 import ScrollToTop from "./utils/scrollToTop";
+import AuraAboutUs from "./pages/aura-about/page";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/aura-gallery" element={<Gallery />} />
         <Route path="/aura-experience" element={<AuraExperience />} />
         <Route path="/aura-packages" element={<AuraPackage />} />
+        <Route path="/about-stories-of-aura" element={<AuraAboutUs />} />
       </Routes>
       <Footer />
     </div>

@@ -126,7 +126,7 @@ export const NavLinks = [
     icon: (
       <IoMdContacts className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    path: "#",
+    path: "/about-stories-of-aura",
   },
   {
     title: "Contact",

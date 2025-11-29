@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 // import emailjs from "@emailjs/browser";
 import { customPlanOptions } from "../../constants/ComponentConstants";
+import { FaCheck } from "react-icons/fa";
 
 const CustomPlanModal = ({ isOpen, onClose }) => {
   const [selected, setSelected] = useState({
@@ -58,7 +59,7 @@ const CustomPlanModal = ({ isOpen, onClose }) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 bg-black/60 flex justify-center items-center z-[999]"
+        className="fixed inset-0 bg-black/60 flex justify-center items-start z-[999] py-10 backdrop-blur-3xl"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -69,7 +70,7 @@ const CustomPlanModal = ({ isOpen, onClose }) => {
           animate={{ scale: 1 }}
           exit={{ scale: 0.85 }}
           transition={{ duration: 0.3 }}
-          className="bg-white w-[90%] max-w-4xl p-8 rounded-3xl shadow-xl relative overflow-y-auto max-h-[85vh]"
+          className="p-8 rounded-3xl shadow-xl relative overflow-y-auto w-[90%]"
         >
           {/* Close Button */}
           <button
@@ -99,12 +100,11 @@ const CustomPlanModal = ({ isOpen, onClose }) => {
                       <div
                         key={i}
                         onClick={() => toggleSelect(section, option)}
-                        className={`p-3 border rounded-xl cursor-pointer transition-all ${
-                          isSelected
-                            ? "bg-blue-600 text-white border-blue-600 shadow-md"
-                            : "bg-gray-50 hover:bg-gray-100"
+                        className={`w-full px-4 py-2 border-b border-gray-300 focus:ring-neutral-500 outline-none duration-200 ease-in-out hover:shadow-md h-full p-3 cursor-pointer transition-all flex justify-start items-center gap-5 ${
+                          isSelected ? "bg-[#DF3F33]" : ""
                         }`}
                       >
+                        {isSelected ? <FaCheck /> : ""}
                         {option}
                       </div>
                     );
