@@ -494,3 +494,21 @@ export const pinterestUrlsDemo = [
     propertyLink: "/property/cat",
   },
 ];
+
+export const aboutData = [
+  {
+    heading: "Hotel Listings",
+    description:
+      "Verified hotels with photos, details, amenities, and location insights—presented in a clean and transparent format.",
+  },
+  {
+    heading: "Exclusive Packages",
+    description:
+      "Explore curated seasonal and special packages offered by hotels—built to enhance your travel experience.",
+  },
+  {
+    heading: "Owner Friendly Tools",
+    description:
+      "Hotel partners enjoy seamless listing management, profile updates, and package publishing—all from a centralized dashboard.",
+  },
+];

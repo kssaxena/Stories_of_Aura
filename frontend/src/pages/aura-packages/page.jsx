@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import { PackageData } from "../../constants/ComponentConstants";
 import PricingTable from "../../components/ui/pricingTable";
+import { bgImage } from "../../constants/FileConstants";
 
 const AuraPackage = () => {
   const ref = useRef(null);
@@ -20,11 +21,17 @@ const AuraPackage = () => {
   const opacity = useTransform(scrollY1, [0, 0.2, 0.8, 1], [0, 1, 1, 0.8]);
   return (
     <div>
+      <div className="fixed top-0 left-0 h-full w-full bg-black">
+        <img
+          src={bgImage}
+          className="h-screen object-cover w-full opacity-40"
+        />
+      </div>
       <motion.div
         ref={ref}
         style={{ y, opacity }}
         transition={{ type: "spring", stiffness: 60, damping: 25 }}
-        className="flex justify-center items-center flex-col lg:gap-20 gap-10 h-screen px-5"
+        className="flex justify-center items-center flex-col lg:gap-20 gap-10 h-screen px-5 relative"
       >
         <motion.h1
           initial={{ opacity: 0, y: 10 }}
@@ -67,7 +74,9 @@ const AuraPackage = () => {
           </span>
         </h1>
       </motion.div>
-      <PricingTable packageData={PackageData} />
+      <div className="z-20">
+        <PricingTable packageData={PackageData} />
+      </div>
     </div>
   );
 };
