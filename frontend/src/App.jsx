@@ -8,6 +8,7 @@ import AuraPackage from "./pages/aura-packages/page";
 import ScrollToTop from "./utils/scrollToTop";
 import AuraAboutUs from "./pages/aura-about/page";
 import { bgImage } from "./constants/FileConstants";
+import AuraContactUs from "./pages/aura-contact/page";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/aura-experience" element={<AuraExperience />} />
         <Route path="/aura-packages" element={<AuraPackage />} />
         <Route path="/about-stories-of-aura" element={<AuraAboutUs />} />
+        <Route path="/contact-stories-of-aura" element={<AuraContactUs />} />
       </Routes>
       <Footer />
     </div>

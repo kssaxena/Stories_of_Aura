@@ -87,93 +87,6 @@ export const products = [
   },
 ];
 
-// export const HeroParallaxImages = [
-//   {
-//     title: "Cat",
-//     link: "https://mrsaxena.arisertradco.com",
-//     thumbnail:
-//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
-//   },
-//   {
-//     title: "Cat",
-//     link: "https://mrsaxena.arisertradco.com",
-//     thumbnail:
-//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
-//   },
-//   {
-//     title: "Cat",
-//     link: "https://mrsaxena.arisertradco.com",
-//     thumbnail:
-//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
-//   },
-//   {
-//     title: "Cat",
-//     link: "https://mrsaxena.arisertradco.com",
-//     thumbnail:
-//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
-//   },
-//   {
-//     title: "Cat",
-//     link: "https://mrsaxena.arisertradco.com",
-//     thumbnail:
-//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
-//   },
-//   {
-//     title: "Cat",
-//     link: "https://mrsaxena.arisertradco.com",
-//     thumbnail:
-//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
-//   },
-//   {
-//     title: "Cat",
-//     link: "https://mrsaxena.arisertradco.com",
-//     thumbnail:
-//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
-//   },
-//   {
-//     title: "Cat",
-//     link: "https://mrsaxena.arisertradco.com",
-//     thumbnail:
-//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
-//   },
-//   {
-//     title: "Cat",
-//     link: "https://mrsaxena.arisertradco.com",
-//     thumbnail:
-//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
-//   },
-//   {
-//     title: "Cat",
-//     link: "https://mrsaxena.arisertradco.com",
-//     thumbnail:
-//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
-//   },
-//   {
-//     title: "Cat",
-//     link: "https://mrsaxena.arisertradco.com",
-//     thumbnail:
-//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
-//   },
-//   {
-//     title: "Cat",
-//     link: "https://mrsaxena.arisertradco.com",
-//     thumbnail:
-//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
-//   },
-//   {
-//     title: "Cat",
-//     link: "https://mrsaxena.arisertradco.com",
-//     thumbnail:
-//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
-//   },
-//   {
-//     title: "Cat",
-//     link: "https://mrsaxena.arisertradco.com",
-//     thumbnail:
-//       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
-//   },
-// ];
-
 export const moreLinks = [
   { name: "Carreers", path: "/carriers" },
   { name: "Aura Experience", path: "/aura-experience" },
@@ -511,4 +424,20 @@ export const aboutData = [
     description:
       "Hotel partners enjoy seamless listing management, profile updates, and package publishing—all from a centralized dashboard.",
   },
+];
+
+export const locations = [
+  "Jibhi",
+  "Kasaul",
+  "Manali",
+  "Sankri",
+  "Osla",
+  "Indore",
+  "Jaipur",
+  "Udaipur",
+  "Ahmedabad",
+  "Himachal Pradesh",
+  "Uttarakhand",
+  "Gujarat",
+  "Madhya Pradesh",
 ];
