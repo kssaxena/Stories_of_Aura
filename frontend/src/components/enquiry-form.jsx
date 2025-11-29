@@ -4,7 +4,7 @@ import Button from "./button-wrapper";
 import { motion } from "framer-motion";
 import { enquiryFormInputs } from "../constants/FileConstants";
 
-const EnquiryForm = ({ onCancel }) => {
+const EnquiryForm = ({ onCancel, packageClassname = "hidden" }) => {
   const fadeInVariant = {
     hidden: { opacity: 0, y: 50 },
     visible: (delay) => ({
@@ -78,6 +78,31 @@ const EnquiryForm = ({ onCancel }) => {
             )}
           </motion.div>
         ))}
+        {/* <div className="w-full h-fit">{content}</div> */}
+        <div className={`w-full h-fit ${packageClassname}`}>
+          <div className="flex justify-center items-start flex-col w-full">
+            {["Starter", "Intermediate (Most popular)", "Professional"].map(
+              (option, index) => (
+                <motion.div
+                  variants={fadeInVariant}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  custom={0.4 + index * 0.15}
+                >
+                  <InputBox
+                    Type="radio"
+                    Name="commissionOption"
+                    LabelName={option}
+                    Value={option.toLowerCase()}
+                    // Checked={selectedOption === option.toLowerCase()}
+                    // onChange={(e) => setSelectedOption(e.target.value)}
+                  />
+                </motion.div>
+              )
+            )}
+          </div>
+        </div>
       </form>
       <div className="flex flex-wrap justify-center gap-6 lg:mt-10 md:mt-10 mt-5">
         <motion.div
