@@ -408,24 +408,6 @@ export const pinterestUrlsDemo = [
   },
 ];
 
-export const aboutData = [
-  {
-    heading: "Hotel Listings",
-    description:
-      "Verified hotels with photos, details, amenities, and location insights—presented in a clean and transparent format.",
-  },
-  {
-    heading: "Exclusive Packages",
-    description:
-      "Explore curated seasonal and special packages offered by hotels—built to enhance your travel experience.",
-  },
-  {
-    heading: "Owner Friendly Tools",
-    description:
-      "Hotel partners enjoy seamless listing management, profile updates, and package publishing—all from a centralized dashboard.",
-  },
-];
-
 export const locations = [
   "Jibhi",
   "Kasaul",
@@ -440,4 +422,149 @@ export const locations = [
   "Uttarakhand",
   "Gujarat",
   "Madhya Pradesh",
+];
+
+export const aboutData = [
+  {
+    title: "1. Lack of Strong Visual Presence & Brand Storytelling",
+    problem: [
+      "Low-quality or inconsistent visuals",
+      "No unified brand story",
+      "Outdated images on OTAs",
+      "USPs not showcased",
+      "No seasonal or trend-based updates",
+    ],
+    solutionTitle: "How We Fix It — Content Creation",
+    solution: [
+      "High-end editorial photography",
+      "Lifestyle & experience-based content",
+      "Drone coverage",
+      "Room, restaurant & experience reels",
+      "Signature brand films",
+      "OTA-optimized imagery",
+      "Seasonal & offer-based creatives",
+    ],
+  },
+  {
+    title: "2. Poor Online Reputation & Negative Review Impact",
+    problem: [
+      "Negative reviews unaddressed",
+      "Unstructured review management",
+      "Poor or late replies",
+      "Fluctuating review scores",
+      "Competitors with weaker facilities win",
+    ],
+    solutionTitle: "How We Fix It — Reputation Management",
+    solution: [
+      "Daily review monitoring",
+      "Brand-safe reply management",
+      "Systems to drive positive reviews",
+      "Guest feedback tracking",
+      "Monthly reputation insights",
+      "Crisis handling",
+      "OTA listing optimization",
+    ],
+  },
+  {
+    title: "3. Inefficient Pricing & Revenue Management",
+    problem: [
+      "Flat pricing year-round",
+      "Decisions based on intuition",
+      "Underpricing on peak days",
+      "Overpricing on low-demand days",
+      "No competitor analysis",
+      "Missed upsell opportunities",
+    ],
+    solutionTitle: "How We Fix It — Revenue Management",
+    solution: [
+      "Competitor pricing matrix",
+      "Demand forecasting",
+      "Day-wise pricing optimization",
+      "Seasonal pricing",
+      "Direct booking offers",
+      "OTA pricing intelligence",
+      "Upsell & F&B strategy",
+    ],
+  },
+  {
+    title: "4. Weak or Outdated Hotel Website",
+    problem: [
+      "Outdated UI/UX",
+      "Slow & unoptimized",
+      "Poor SEO",
+      "No storytelling",
+      "No online booking integration",
+      "Poor visuals",
+      "Low direct bookings",
+    ],
+    solutionTitle: "How We Fix It — Website Development",
+    solution: [
+      "Premium brand positioning",
+      "Fast & mobile-first builds",
+      "High-ranking SEO setup",
+      "Direct booking integration",
+      "Visual storytelling",
+      "High-quality imagery",
+      "Reduced OTA dependence",
+    ],
+  },
+  {
+    title: "5. Low Visibility Due to Lack of PR & Brand Authority",
+    problem: [
+      "Invisible to key audiences",
+      "No travel features",
+      "No brand collaborations",
+      "No PR presence",
+      "Low brand recall",
+    ],
+    solutionTitle: "How We Fix It — PR & Branding",
+    solution: [
+      "Travel & lifestyle PR features",
+      "Influencer collaborations",
+      "Digital media placements",
+      "Magazine & blog features",
+      "Brand partnerships",
+      "Community presence",
+    ],
+  },
+  {
+    title: "6. No Performance Marketing Strategy",
+    problem: [
+      "Random ads with zero tracking",
+      "No remarketing",
+      "Wrong audience targeting",
+      "No seasonal campaigns",
+      "No Google Hotel Ads",
+      "No analytics",
+    ],
+    solutionTitle: "How We Fix It — Performance Marketing",
+    solution: [
+      "Full funnel campaigns",
+      "Retargeting flows",
+      "OTA traffic boosting",
+      "Seasonal offer ads",
+      "Meta & Google Ads",
+      "Precise tracking & analytics",
+    ],
+  },
+  {
+    title: "7. Lack of Unified Growth Strategy",
+    problem: [
+      "Multiple vendors",
+      "Inconsistent brand identity",
+      "Lost budget",
+      "Confusing guest experience",
+      "Misaligned messaging",
+    ],
+    solutionTitle: "How We Fix It — Integrated Growth System",
+    solution: [
+      "Visual identity creation",
+      "Content ecosystem",
+      "Reputation & brand trust",
+      "Revenue strategy",
+      "Website & digital infra",
+      "PR presence",
+      "Performance marketing",
+    ],
+  },
 ];
