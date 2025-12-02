@@ -1,116 +1,108 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import React, { useRef } from "react";
+import { FiCheckCircle } from "react-icons/fi";
 import { aboutData } from "../../constants/FileConstants";
 
 const AuraAboutUs = () => {
   return (
-    <div className="relative w-full overflow-hidden">
-      {/* ========= HERO SECTION ========= */}
-      <section className="relative h-[70vh] w-full flex items-center justify-center">
-        {/* Hero Text */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="relative text-center  px-6"
-        >
-          <h1 className="text-4xl md:text-6xl font-semibold">
-            About Our Platform
-          </h1>
-          <p className="mt-4 max-w-2xl mx-auto text-gray-200 text-lg">
-            A trusted digital space connecting hotels and travelers with
-            clarity, transparency, and premium hospitality experiences.
-          </p>
-        </motion.div>
-      </section>
+    <div className="w-full px-6 md:px-16 py-24 text-white select-none">
+      {/* HERO */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 1 }}
+        transition={{ duration: 0.7 }}
+        className="mb-20"
+      >
+        <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+          Why Hotels & Resorts Struggle With Revenue,
+          <br />
+          <span className="text-[#DF3F33]">and How We Fix It</span>
+        </h1>
 
-      {/* ========= ABOUT CONTENT ========= */}
-      <section className="py-20 px-6 md:px-16">
-        <div className="max-w-5xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-semibold mb-6"
-          >
-            Who We Are
-          </motion.h2>
+        <p className="mt-5 max-w-3xl text-gray-300">
+          The hospitality industry is dynamic yet challenging. Visibility,
+          positioning, and digital infrastructure determine success. At Stories
+          of Aura, we solve these problems through content, reputation, pricing,
+          branding, websites, PR, and performance marketing.
+        </p>
+      </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
+      {/* SECTIONS */}
+      <div className="flex flex-col gap-20">
+        {aboutData.map((sec, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className=" text-lg leading-relaxed"
+            transition={{ duration: 0.8 }}
+            className="backdrop-blur-xl bg-white/5 rounded-2xl p-8 border border-white/10 shadow-xl"
           >
-            We are a hospitality-driven digital platform designed to bring hotel
-            experiences closer to customers. Whether you are a hotel owner
-            seeking better visibility or a traveler planning your next stay, our
-            platform brings curated listings, verified details, and clear
-            insights into every property.
-            <br />
-            <br />
-            Our mission is to simplify the hotel discovery process while
-            maintaining the highest level of transparency and professionalism.
-            We focus on authentic listings, honest information, and a smooth
-            browsing experience—helping users make confident decisions.
-          </motion.p>
-        </div>
-      </section>
+            {/* Title */}
+            <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+              <span className="text-[#DF3F33]">{sec.title.split(".")[0]}.</span>{" "}
+              {sec.title.replace(/^\d+\.\s*/, "")}
+            </h2>
 
-      {/* ========= VALUES SECTION ========= */}
-      <section className="py-20 px-6 md:px-16">
-        <div className="max-w-5xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-semibold mb-10"
-          >
-            What We Offer
-          </motion.h2>
+            {/* PROBLEM + SOLUTION */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              {/* PROBLEM SIDE */}
+              <div>
+                <h3 className="text-xl font-medium mb-3 text-[#DF3F33]">
+                  The Problem
+                </h3>
+                <ul className="space-y-2">
+                  {sec.problem.map((p, idx) => (
+                    <motion.li
+                      key={idx}
+                      whileHover={{ x: 5 }}
+                      className="flex items-start gap-3 text-gray-300"
+                    >
+                      <FiCheckCircle className="text-[#DF3F33] mt-1" />
+                      {p}
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
 
-          <div className="grid md:grid-cols-3 gap-10">
-            {/* Card 1 */}
-            {aboutData.map((data) => (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className=" shadow-md p-6 rounded-xl border backdrop-blur-3xl"
-              >
-                <h3 className="text-xl font-medium mb-2">{data.heading}</h3>
-                <p className="">{data.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+              {/* SOLUTION SIDE */}
+              <div>
+                <h3 className="text-xl font-medium mb-3 text-[#DF3F33]">
+                  {sec.solutionTitle}
+                </h3>
+                <ul className="space-y-2">
+                  {sec.solution.map((s, idx) => (
+                    <motion.li
+                      key={idx}
+                      whileHover={{ x: 5 }}
+                      className="flex items-start gap-3 text-gray-300"
+                    >
+                      <FiCheckCircle className="text-[#DF3F33] mt-1" />
+                      {s}
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
 
-      {/* ========= STATEMENT SECTION ========= */}
-      <section className="py-20 ">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-semibold mb-6"
-          >
-            A Platform Built on Trust & Quality
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-300 text-lg leading-relaxed"
-          >
-            We are committed to creating a reliable environment where hotel
-            owners can showcase their properties authentically, and customers
-            can explore them with confidence. Every listing, every detail, and
-            every update is guided by integrity and transparency.
-          </motion.p>
-        </div>
-      </section>
+      {/* FINAL BLOCK */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 1 }}
+        transition={{ duration: 0.9 }}
+        className="mt-24 text-center max-w-3xl mx-auto"
+      >
+        <h2 className="text-4xl font-semibold mb-4 text-[#DF3F33]">
+          Final Word
+        </h2>
+        <p className="text-gray-300 leading-relaxed">
+          Hotels don’t grow because they exist. They grow because they are seen,
+          trusted, and positioned correctly. With our unified strategy and
+          creative expertise, we turn hotels into high-performing revenue
+          engines.
+        </p>
+      </motion.div>
     </div>
   );
 };
