@@ -16,7 +16,7 @@ const GalleryFeed = ({ images }) => {
           >
             <motion.img
               src={item.image}
-              alt="pinterest-img"
+              alt={item.image}
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3 }}
               className="w-full rounded-2xl shadow-md"

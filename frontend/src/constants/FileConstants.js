@@ -237,177 +237,6 @@ export const AccordionData = [
   },
 ];
 
-export const pinterestUrls = [
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/IMG_1493.jpg?updatedAt=1758731084593",
-    propertyLink: "/property/grassfield-valley",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-09-22%20at%2012.05.48%20AM.jpeg?updatedAt=1758731144705",
-    propertyLink: "/property/grassfield-riviera",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-09-22%20at%2012.10.19%20AM.jpeg?updatedAt=1758731144668",
-    propertyLink: "/property/aura-suites",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-25%20at%209.38.13%20PM.jpeg?updatedAt=1758731145045",
-    propertyLink: "/property/aura-heritage",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.29.43%20PM%201.jpeg?updatedAt=1755274074201",
-    propertyLink: "/property/serene-retreat",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.29.43%20PM%202.jpeg?updatedAt=1755274074244",
-    propertyLink: "/property/royal-villa",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.21.59%20PM.jpeg?updatedAt=1755274074342",
-    propertyLink: "/property/aura-hillside",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/IMG20230211174805.jpg?updatedAt=1755274075827",
-    propertyLink: "/property/majestic-palms",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/SAVE_20240424_204829.jpg?updatedAt=1755274079374",
-    propertyLink: "/property/ocean-pearl",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/SAVE_20240424_204836.jpg?updatedAt=1755274080058",
-    propertyLink: "/property/lakeside-resort",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
-    propertyLink: "/property/grand-meadows",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.22.00%20PM%201.jpeg?updatedAt=1755274080760",
-    propertyLink: "/property/sunset-aroma",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.24.21%20PM%202.jpeg?updatedAt=1755274080881",
-    propertyLink: "/property/aura-pavillion",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.22.00%20PM.jpeg?updatedAt=1755274081162",
-    propertyLink: "/property/mountain-vista",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.29.43%20PM.jpeg?updatedAt=1755274081453",
-    propertyLink: "/property/aura-palace",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/IMG_7125.JPG?updatedAt=1755274082105",
-    propertyLink: "/property/grand-residency",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.24.21%20PM.jpeg?updatedAt=1755274086372",
-    propertyLink: "/property/cityscape-inn",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.24.21%20PM%201.jpeg?updatedAt=1755274086488",
-    propertyLink: "/property/aura-zen",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/DSC_0382.jpg?updatedAt=1755274087405",
-    propertyLink: "/property/royal-orchard",
-  },
-];
-
-export const pinterestUrlsDemo = [
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC00984-HDR.jpg?updatedAt=1762975524118",
-    propertyLink: "/property/cat",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01093-HDR.jpg?updatedAt=1762975524143",
-    propertyLink: "/property/cat",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01102-HDR.jpg?updatedAt=1762975524647",
-    propertyLink: "/property/cat",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01394-HDR.jpg?updatedAt=1762975524750",
-    propertyLink: "/property/cat",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01050-HDR.jpg?updatedAt=1762975524827",
-    propertyLink: "/property/cat",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01097-HDR.jpg?updatedAt=1762975524865",
-    propertyLink: "/property/cat",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01386-HDR.jpg?updatedAt=1762975524884",
-    propertyLink: "/property/cat",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01079-HDR.jpg?updatedAt=1762975524972",
-    propertyLink: "/property/cat",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC00979-HDR.jpg?updatedAt=1762975525028",
-    propertyLink: "/property/cat",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC00995-HDR.jpg?updatedAt=1762975525091",
-    propertyLink: "/property/cat",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01089-HDR.jpg?updatedAt=1762975525126",
-    propertyLink: "/property/cat",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01110-HDR.jpg?updatedAt=1762975525179",
-    propertyLink: "/property/cat",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC00974-HDR.jpg?updatedAt=1762975525290",
-    propertyLink: "/property/cat",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01054-HDR.jpg?updatedAt=1762975525290",
-    propertyLink: "/property/cat",
-  },
-];
-
 export const locations = [
   "Jibhi",
   "Kasaul",
@@ -566,5 +395,553 @@ export const aboutData = [
       "PR presence",
       "Performance marketing",
     ],
+  },
+];
+
+export const galleryImage = [
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092614.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092613.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092606-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092599-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092592-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092585-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092584-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092564-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092557-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092550-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092549-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092542-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092529-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092522-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092515-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092508-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092501-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092494-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092484.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092483.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092482.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092475-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092468-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092461-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092454-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092447-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092440-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092433-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092426-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092419-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092381-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092368-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092361-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092353-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092326-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092319-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092312-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092305-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092298-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092291-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092284-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092277-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092272-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092263-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092256-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092249-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092242-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092235-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092228-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092221-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092214-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092207-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092200-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092191-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092184-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092177-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092170-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092163-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092156-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092149-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092128-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092121-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092116-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081747-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081740-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081733-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081726-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081719-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081712-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081698-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081691-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081684-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081677-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081670-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081663-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081656-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081649-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081596-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081589-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081582-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081575-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081568-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081561-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081554-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081547-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081540-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081533-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081525-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081518-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081420-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081399-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081398-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081385-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081378-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081371-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081364-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081357-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081350-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081343-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081337.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081329-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081308-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081301-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081294-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081287-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081280-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081266-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081259-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081252-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
   },
 ];

@@ -1,10 +1,6 @@
 import React, { useRef } from "react";
 import GalleryFeed from "../../components/ui/gallery-feed";
-import {
-  bgImage,
-  pinterestUrls,
-  pinterestUrlsDemo,
-} from "../../constants/FileConstants";
+import { bgImage, galleryImage } from "../../constants/FileConstants";
 import {
   AnimatePresence,
   motion,
@@ -12,9 +8,11 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import { shuffleArray } from "../../utils/imageShuffle";
 
 const Gallery = () => {
   const ref = useRef(null);
+  const shuffledImages = React.useMemo(() => shuffleArray(galleryImage), []);
 
   // Scroll for first motion section
   const { scrollYProgress: scrollY1 } = useScroll({
@@ -82,11 +80,7 @@ const Gallery = () => {
         </h1>
       </motion.div>
       <div className="h-fit relative">
-        <GalleryFeed images={pinterestUrls} />
-        {/* <h1 className="text-xl py-10 text-center">
-          👇 see this is how it will look if i only uploaded landscapes
-        </h1>
-        <GalleryFeed images={pinterestUrlsDemo} /> */}
+        <GalleryFeed images={shuffledImages} />
       </div>
     </div>
   );
