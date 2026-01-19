@@ -401,16 +401,6 @@ export const aboutData = [
 export const galleryImage = [
   {
     image:
-      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092614.jpg?tr=f-auto,q-70,w-800",
-    propertyLink: "",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092613.jpg?tr=f-auto,q-70,w-800",
-    propertyLink: "",
-  },
-  {
-    image:
       "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092606-HDR.jpg?tr=f-auto,q-70,w-800",
     propertyLink: "",
   },
@@ -487,21 +477,6 @@ export const galleryImage = [
   {
     image:
       "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092494-HDR.jpg?tr=f-auto,q-70,w-800",
-    propertyLink: "",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092484.jpg?tr=f-auto,q-70,w-800",
-    propertyLink: "",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092483.jpg?tr=f-auto,q-70,w-800",
-    propertyLink: "",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1092482.jpg?tr=f-auto,q-70,w-800",
     propertyLink: "",
   },
   {
@@ -892,16 +867,6 @@ export const galleryImage = [
   {
     image:
       "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081343-HDR.jpg?tr=f-auto,q-70,w-800",
-    propertyLink: "",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081337.jpg?tr=f-auto,q-70,w-800",
-    propertyLink: "",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081329-HDR.jpg?tr=f-auto,q-70,w-800",
     propertyLink: "",
   },
   {

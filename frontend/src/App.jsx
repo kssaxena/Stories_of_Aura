@@ -2,13 +2,13 @@ import { Route, Routes } from "react-router";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import Home from "./pages/home/page";
+import AuraGallery from "./pages/aura-gallery/page";
 import AuraExperience from "./pages/aura-experience/page";
-import Gallery from "./pages/aura-gallery/page";
 import AuraPackage from "./pages/aura-packages/page";
-import ScrollToTop from "./utils/scrollToTop";
 import AuraAboutUs from "./pages/aura-about/page";
-import { bgImage } from "./constants/FileConstants";
 import AuraContactUs from "./pages/aura-contact/page";
+import ScrollToTop from "./utils/scrollToTop";
+import { bgImage } from "./constants/FileConstants";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/aura-gallery" element={<Gallery />} />
+        <Route path="/aura-gallery" element={<AuraGallery />} />
         <Route path="/aura-experience" element={<AuraExperience />} />
         <Route path="/aura-packages" element={<AuraPackage />} />
         <Route path="/about-stories-of-aura" element={<AuraAboutUs />} />

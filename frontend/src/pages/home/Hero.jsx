@@ -1,4 +1,5 @@
 import bg from "../../assets/Nssrie.jpg";
+import mountainImage from "../../assets/mountain-hero.jpg";
 import {
   motion,
   spring,
@@ -31,57 +32,67 @@ const HeroSection = () => {
 
   return (
     <div
-      className="w-full h-[60vh] lg:h-screen md:h-[80vh] overflow-hidden bg-black/20 text-white flex flex-col justify-center items-center gap-4 relative"
+      className="w-full lg:h-screen overflow-hidden bg-black/20 text-white flex flex-col justify-center items-center gap-4 relative"
       // onMouseMove={handleMouseMove}
     >
-      {/* Background image */}
-      <motion.img
-        src={bg}
-        alt="Glasshaven Modern House"
-        className="w-full lg:h-full h-full object-cover opacity-60 absolute top-0 left-0 "
-      />
+      <section className="relative w-full h-screen  overflow-hidden bg-hero">
+        {/* Background */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={mountainImage}
+            alt="Mountain"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-hero-overlay pointer-events-none" />
+        </div>
 
-      {/* Semi-transparent overlay for tone */}
-      <div className="absolute inset-0 bg-black/50 z-20 w-full" />
+        {/* Cave overlays */}
+        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-hero-cave via-hero-cave/70 to-transparent z-5" />
+        <div className="absolute top-0 left-0 w-12 h-full bg-gradient-to-r from-hero-cave/60 to-transparent z-5" />
+        <div className="absolute top-0 right-0 w-12 h-full bg-gradient-to-l from-hero-cave/60 to-transparent z-5" />
 
-      <motion.h1
-        // style={{ x: translateX, y: translateY }}
-        // initial={{ scale: 0.98, opacity: 1 }}
-        // animate={{ scale: 1, opacity: 1 }}
-        // transition={{ type: "spring", stiffness: 120, damping: 16 }}
-        className="w-full md:text-[4rem] lg:text-[6rem] text-[32px] font-semibold uppercase lg:tracking-widest md:tracking-widest tracking-normal flex justify-center items-center lg:gap-16 md:gap-10 gap-5 select-none z-20"
-      >
-        <motion.span
-          className="bg-clip-text text-white/80  md:tracking-widest lg:-translate-y-0 -translate-y-0 opacity-80"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.1, type: spring }}
-        >
-          stories
-        </motion.span>{" "}
-        <motion.span
-          className="bg-clip-text text-white/80 md:tracking-widest lg:-translate-y-0 -translate-y-0 opacity-80"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, type: spring }}
-        >
-          of{" "}
-        </motion.span>
-        <motion.span
-          className="font-blanka text-white/80 lg:tracking-[2rem] tracking-widest lg:-translate-y-2 -translate-y-1 opacity-80"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5, type: spring }}
-        >
-          aura
-        </motion.span>
-      </motion.h1>
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
+          {/* <div className="mb-5">
+               <MountainIcon />
+             </div> */}
 
-      <div className="">
-        <motion.p className="font-samarkan lg:text-5xl md:text-3xl text-2xl mix-blend-difference text-gray-200">
-          Documenting Indian Hospitality{" "}
-        </motion.p>
-      </div>
+          <motion.h1 className="w-full md:text-[4rem] lg:text-[6rem] text-[32px] font-semibold uppercase lg:tracking-widest md:tracking-widest tracking-normal flex justify-center items-center lg:gap-16 md:gap-10 gap-5 select-none z-20">
+            <motion.span
+              className="bg-clip-text text-white/80  md:tracking-widest lg:-translate-y-0 -translate-y-0 opacity-80"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.1, type: spring }}
+            >
+              stories
+            </motion.span>{" "}
+            <motion.span
+              className="bg-clip-text text-white/80 md:tracking-widest lg:-translate-y-0 -translate-y-0 opacity-80"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.3, type: spring }}
+            >
+              of{" "}
+            </motion.span>
+            <motion.span
+              className="font-blanka text-white/80 lg:tracking-[2rem] tracking-widest lg:-translate-y-2 -translate-y-1 opacity-80"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5, type: spring }}
+            >
+              aura
+            </motion.span>
+          </motion.h1>
+          <div className="">
+            <motion.p className="font-samarkan lg:text-5xl md:text-3xl text-2xl mix-blend-difference text-gray-200">
+              Documenting Indian Hospitality{" "}
+            </motion.p>
+          </div>
+        </div>
+
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-hero-cave/40 to-transparent z-5" />
+      </section>
 
       {/* Social bar */}
       <div className="absolute top-10 w-full z-20">

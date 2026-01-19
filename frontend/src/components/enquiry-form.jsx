@@ -20,7 +20,7 @@ const EnquiryForm = ({ onCancel, packageClassname = "hidden" }) => {
   };
 
   return (
-    <div className="w-full lg:w-4/5 mx-auto">
+    <div className="w-full lg:w-4/5">
       <motion.p
         whileInView="visible"
         initial="hidden"
@@ -104,12 +104,12 @@ const EnquiryForm = ({ onCancel, packageClassname = "hidden" }) => {
           </div>
         </div>
       </form>
-      <div className="flex flex-wrap justify-center gap-6 lg:mt-10 md:mt-10 mt-5">
+      <div className="flex flex-wrap justify-center gap-6 sticky -bottom-10 w-full">
         <motion.div
           variants={fadeInVariant}
           initial="hidden"
           whileInView="visible"
-          custom={1.5}
+          // custom={1.5}
         >
           <Button Label="Submit" />
         </motion.div>
@@ -118,7 +118,7 @@ const EnquiryForm = ({ onCancel, packageClassname = "hidden" }) => {
           variants={fadeInVariant}
           initial="hidden"
           whileInView="visible"
-          custom={1.7}
+          // custom={1.7}
         >
           <Button Label="Cancel" onClick={onCancel} />
         </motion.div>
