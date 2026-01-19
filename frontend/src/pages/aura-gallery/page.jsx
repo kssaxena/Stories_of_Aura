@@ -45,6 +45,7 @@ const AuraGallery = () => {
   const ref = useRef(null);
 
   const shuffledImages = useMemo(() => shuffleArray(galleryImage), []);
+  const featuredImage = useMemo(() => shuffleArray(galleryImage.slice(0, 10)));
 
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -154,7 +155,16 @@ const AuraGallery = () => {
         </motion.div>
 
         {/* Gallery */}
-        <div className="relative h-fit">
+        <div className="relative h-fit flex flex-col justify-center items-center gap-10">
+          <h1 className="font-agile text-3xl md:text-5xl uppercase border-b border-red-500 w-fit">
+            featured
+          </h1>
+          <GalleryFeed images={featuredImage} />
+        </div>
+        <div className="relative h-fit flex flex-col justify-center items-center gap-10">
+          <h1 className="font-agile text-3xl md:text-5xl uppercase border-b border-red-500 w-fit">
+            Gallery
+          </h1>
           <GalleryFeed images={shuffledImages} />
         </div>
       </div>

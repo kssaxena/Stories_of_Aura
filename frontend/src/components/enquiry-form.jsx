@@ -99,12 +99,12 @@ const EnquiryForm = ({ onCancel, packageClassname = "hidden" }) => {
                     // onChange={(e) => setSelectedOption(e.target.value)}
                   />
                 </motion.div>
-              )
+              ),
             )}
           </div>
         </div>
       </form>
-      <div className="flex flex-wrap justify-center gap-6 sticky -bottom-10 w-full">
+      <div className="flex flex-wrap justify-center gap-6 sticky -bottom-10 md:bottom-0 w-full md:bg-transparent bg-black">
         <motion.div
           variants={fadeInVariant}
           initial="hidden"
