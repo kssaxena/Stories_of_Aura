@@ -2,8 +2,134 @@ import { motion } from "framer-motion";
 import { FiMail, FiPhone, FiMapPin, FiSend } from "react-icons/fi";
 import InputBox from "../../components/input-wrapper";
 import Button from "../../components/button-wrapper";
+import { enquiryFormInputs } from "../../constants/FileConstants";
 
 const AuraContactUs = () => {
+  const locations = ["Manali", "Kasol", "Jawai", "Jaipur", "Udaipur", "Indore"];
+
+  const EnquiryForm = ({ onCancel, packageClassname = "hidden" }) => {
+    const fadeInVariant = {
+      hidden: { opacity: 0, y: 50 },
+      visible: (delay) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+          type: "spring",
+          duration: 0.5,
+          delay,
+          ease: "easeInOut",
+        },
+      }),
+    };
+
+    return (
+      <div className="w-full lg:w-4/5">
+        <motion.p
+          whileInView="visible"
+          initial="hidden"
+          variants={fadeInVariant}
+          custom={0.3}
+          className="text-2xl md:text-6xl lg:text-7xl mb-8 uppercase text-nowrap text-center"
+        >
+          Let us reach you !
+        </motion.p>
+
+        <form className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6 md:gap-8 px-10">
+          {/* Animated Inputs */}
+          {enquiryFormInputs.map((field, index) => (
+            <motion.div
+              key={field.label}
+              variants={fadeInVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={0.4 + index * 0.15}
+            >
+              {/* Conditional Rendering: Text Input or Dropdown */}
+              {field.options ? (
+                <div className="py-4 w-full">
+                  <label
+                    htmlFor={field.label}
+                    className="block text-sm font-medium mb-2 ml-4 "
+                  >
+                    {field.label}
+                  </label>
+                  <select
+                    id={field.label}
+                    name={field.label}
+                    className="w-full px-4 py-2 text-white bg-transparent border-b border-gray-300 focus:ring-neutral-500 focus:neutral-red-500 outline-none transition duration-200 ease-in-out hover:shadow-md h-full"
+                  >
+                    <option value="" disabled selected hidden>
+                      {field.placeholder}
+                    </option>
+                    {field.options.map((option, i) => (
+                      <option
+                        key={i}
+                        value={option}
+                        className="bg-gray-900 text-white"
+                      >
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              ) : (
+                <InputBox
+                  Placeholder={field.placeholder}
+                  LabelName={field.label}
+                />
+              )}
+            </motion.div>
+          ))}
+          {/* <div className="w-full h-fit">{content}</div> */}
+          <div className={`w-full h-fit ${packageClassname}`}>
+            <div className="flex justify-center items-start flex-col w-full">
+              {["Starter", "Intermediate (Most popular)", "Professional"].map(
+                (option, index) => (
+                  <motion.div
+                    variants={fadeInVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    custom={0.4 + index * 0.15}
+                  >
+                    <InputBox
+                      Type="radio"
+                      Name="commissionOption"
+                      LabelName={option}
+                      Value={option.toLowerCase()}
+                      // Checked={selectedOption === option.toLowerCase()}
+                      // onChange={(e) => setSelectedOption(e.target.value)}
+                    />
+                  </motion.div>
+                ),
+              )}
+            </div>
+          </div>
+        </form>
+        <div className="flex flex-wrap justify-center gap-6 w-full">
+          <motion.div
+            variants={fadeInVariant}
+            initial="hidden"
+            whileInView="visible"
+            // custom={1.5}
+          >
+            <Button Label="Submit" />
+          </motion.div>
+
+          <motion.div
+            variants={fadeInVariant}
+            initial="hidden"
+            whileInView="visible"
+            // custom={1.7}
+          >
+            <Button Label="Cancel" onClick={onCancel} />
+          </motion.div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="w-full px-6 md:px-16 py-24 text-white select-none">
       {/* HERO */}
@@ -28,48 +154,38 @@ const AuraContactUs = () => {
       </motion.div>
 
       {/* MAIN CONTENT */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div className="flex flex-col justify-center items-center gap-16">
         {/* CONTACT INFO */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="backdrop-blur-xl bg-white/5 rounded-2xl p-8 border border-white/10 shadow-xl space-y-8"
+          className="backdrop-blur-xl bg-white/5 rounded-2xl p-8 border border-white/10 shadow-xl w-full"
         >
-          <h2 className="text-2xl md:text-3xl font-semibold">
-            How to Reach Us
-          </h2>
+          <div className="w-full flex flex-col justify-center items-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-2xl md:text-3xl font-semibold text-center mb-10"
+            >
+              We Serve In These Locations
+            </motion.h2>
 
-          <div className="space-y-5 text-gray-300">
-            <div className="flex items-start gap-4">
-              <FiMail className="text-[#DF3F33] mt-1 text-xl" />
-              <div>
-                <p className="font-medium text-white">Email</p>
-                <p>hello@storiesofaura.com</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <FiPhone className="text-[#DF3F33] mt-1 text-xl" />
-              <div>
-                <p className="font-medium text-white">Phone</p>
-                <p>+91 9XXXXXXXXX</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <FiMapPin className="text-[#DF3F33] mt-1 text-xl" />
-              <div>
-                <p className="font-medium text-white">Location</p>
-                <p>India — Working with Hotels Worldwide</p>
-              </div>
+            <div className="flex flex-wrap gap-6">
+              {locations.map((loc, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  className="text-center border border-gray-300 rounded-lg py-3 px-4"
+                >
+                  {loc}
+                </motion.div>
+              ))}
             </div>
           </div>
-
-          <p className="text-gray-400 text-sm leading-relaxed">
-            Prefer WhatsApp, email, or a quick call? We respond within 24 hours.
-            All discussions are confidential.
-          </p>
         </motion.div>
 
         {/* CONTACT FORM */}
@@ -77,9 +193,10 @@ const AuraContactUs = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="backdrop-blur-xl bg-white/5 rounded-2xl p-8 border border-white/10 shadow-xl"
+          className="backdrop-blur-xl bg-white/5 rounded-2xl p-8 border border-white/10 shadow-xl w-full flex justify-center items-center"
         >
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+          <EnquiryForm />
+          {/* <h2 className="text-2xl md:text-3xl font-semibold mb-6">
             Start the Conversation
           </h2>
 
@@ -96,16 +213,7 @@ const AuraContactUs = () => {
             />
 
             <Button Label="Send Message" />
-
-            {/* <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.97 }}
-              transition={{ duration: 0.2 }}
-              className="flex items-center gap-2 bg-[#DF3F33] px-6 py-3 rounded-lg font-semibold text-white hover:opacity-90"
-            >
-              Send Message <FiSend />
-            </motion.button> */}
-          </form>
+          </form> */}
         </motion.div>
       </div>
 

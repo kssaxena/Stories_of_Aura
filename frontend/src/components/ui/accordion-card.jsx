@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const AccordionCard = ({ logo, propertyImage, title, description }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,8 +9,8 @@ const AccordionCard = ({ logo, propertyImage, title, description }) => {
     typeof description === "string" ? description : (description?.intro ?? "");
 
   return (
-    <div className="w-full max-w-7xl mx-auto border-t border-neutral-200">
-      <div className="rounded-2xl overflow-hidden backdrop-blur-3xl">
+    <div className="w-full max-w-7xl my-20 mx-auto ">
+      <div className="rounded-2xl overflow-hidden backdrop-blur-3xl border border-neutral-800">
         {/* Header (same pattern as Policies) */}
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -52,21 +52,9 @@ const AccordionCard = ({ logo, propertyImage, title, description }) => {
               className="overflow-hidden backdrop-blur-3xl"
             >
               <div className="p-6 space-y-8">
-                {/* Image */}
-                {/* {propertyImage && (
-                  <motion.img
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    src={propertyImage}
-                    alt={title}
-                    className="w-full h-[28rem] object-cover rounded-xl"
-                  />
-                )} */}
-
                 {/* Intro */}
                 {introText && (
-                  <p className="text-gray-300 text-lg leading-relaxed text-justify">
+                  <p className="text-gray-300 text-lg leading-relaxed">
                     {introText}
                   </p>
                 )}
@@ -91,6 +79,12 @@ const AccordionCard = ({ logo, propertyImage, title, description }) => {
                     </motion.div>
                   ))}
               </div>
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="w-full flex flex-col items-center justify-between px-6 py-5 "
+              >
+                Close <FaChevronUp className="w-6 h-6 text-gray-300" />
+              </button>
             </motion.div>
           )}
         </AnimatePresence>

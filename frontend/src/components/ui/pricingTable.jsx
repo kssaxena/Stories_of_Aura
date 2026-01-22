@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import Button from "../button-wrapper";
-import CustomPlanModal from "./pricingTableCustom";
 import { motion, AnimatePresence } from "framer-motion";
 import EnquiryForm from "../enquiry-form";
-import InputBox from "../input-wrapper";
 
 const PricingTable = ({ packageData }) => {
-  const [showCustom, setShowCustom] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const fadeInVariant = {
     hidden: { opacity: 0, y: 50 },
@@ -63,21 +60,6 @@ const PricingTable = ({ packageData }) => {
         ))}
       </div>
 
-      {/* COMPARE BUTTON */}
-      <div className=" mt-12">
-        <Button
-          Label="Choose your desired package"
-          onClick={() => setShowCustom(true)}
-        />
-      </div>
-      {showCustom && (
-        <div className="absolute z-50 w-full top-0 left-0 h-screen overflow-y-scroll">
-          <CustomPlanModal
-            isOpen={showCustom}
-            onClose={() => setShowCustom(false)}
-          />
-        </div>
-      )}
       <AnimatePresence>
         {isActive && (
           <motion.div

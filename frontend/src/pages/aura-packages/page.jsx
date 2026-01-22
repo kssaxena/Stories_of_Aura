@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   AnimatePresence,
   motion,
@@ -6,12 +6,16 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { PackageData } from "../../constants/ComponentConstants";
 import PricingTable from "../../components/ui/pricingTable";
 import { bgImage } from "../../constants/FileConstants";
+import CustomPlanModal from "../../components/ui/pricingTableCustom";
+import Button from "../../components/button-wrapper";
 
 const AuraPackage = () => {
   const ref = useRef(null);
+  const [showCustom, setShowCustom] = useState(false);
   const { scrollYProgress: scrollY1 } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
@@ -19,6 +23,17 @@ const AuraPackage = () => {
   const y = useTransform(scrollY1, [0, 1], ["1000px", "-1000px"]);
 
   const opacity = useTransform(scrollY1, [0, 0.2, 0.8, 1], [0, 1, 1, 0.8]);
+  useEffect(() => {
+    if (showCustom) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showCustom]);
   return (
     <div>
       <div className="fixed top-0 left-0 h-full w-full bg-black">
@@ -74,9 +89,38 @@ const AuraPackage = () => {
           </span>
         </h1>
       </motion.div>
-      <div className="z-20">
+      <div className="">
         <PricingTable packageData={PackageData} />
+
+        <div className="flex justify-center items-center p-5">
+          <div className=" mt-12">
+            <Button
+              Label="Choose your desired package"
+              onClick={() => setShowCustom(true)}
+            />
+          </div>
+        </div>
       </div>
+      <AnimatePresence>
+        {showCustom && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+            className="overflow-hidden backdrop-blur-3xl flex justify-center items-center w-full flex-col h-fit"
+          >
+            <CustomPlanModal onClose={() => setShowCustom(false)} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {/* {showCustom && (
+        <div className="fixed inset-0 z-50 bg-black/90 overflow-y-auto">
+          <div className="min-h-screen w-full flex justify-center items-start py-10">
+            <CustomPlanModal onClose={() => setShowCustom(false)} />
+          </div>
+        </div>
+      )} */}
     </div>
   );
 };

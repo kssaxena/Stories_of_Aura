@@ -1,165 +1,259 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-// import emailjs from "@emailjs/browser";
-import { customPlanOptions } from "../../constants/ComponentConstants";
-import { FaCheck } from "react-icons/fa";
+import Button from "../button-wrapper";
+import EnquiryForm from "../enquiry-form";
 
-const CustomPlanModal = ({ isOpen, onClose }) => {
-  const [selected, setSelected] = useState({
-    photography: [],
-    videography: [],
-    creatives: "",
-    reels: "",
-    smm: [],
-    branding: "",
-    addOns: [],
-    notes: "",
-  });
+const BASE_PACKAGES = [
+  {
+    id: "starter",
+    name: "Starter Base",
+    description: "For early-stage brands",
+    defaults: {
+      creatives: 8,
+      stories: 6,
+      reels: 4,
+    },
+  },
+  {
+    id: "growth",
+    name: "Growth Base",
+    description: "For scaling brands",
+    defaults: {
+      creatives: 14,
+      stories: 12,
+      reels: 8,
+    },
+  },
+  {
+    id: "enterprise",
+    name: "Enterprise Base",
+    description: "For high-volume brands",
+    defaults: {
+      creatives: 20,
+      stories: 30,
+      reels: 12,
+    },
+  },
+];
 
-  const toggleSelect = (field, value) => {
-    setSelected((prev) => {
-      const arr = prev[field] || [];
-      return arr.includes(value)
-        ? { ...prev, [field]: arr.filter((x) => x !== value) }
-        : { ...prev, [field]: [...arr, value] };
-    });
+const CustomPackageModal = ({ onClose }) => {
+  const [base, setBase] = useState(null);
+  const [values, setValues] = useState({});
+  const [billing, setBilling] = useState("monthly");
+  const [addons, setAddons] = useState([]);
+  const [openForm, setOpenForm] = useState(false);
+
+  const toggleAddon = (addon) => {
+    setAddons((prev) =>
+      prev.includes(addon) ? prev.filter((a) => a !== addon) : [...prev, addon],
+    );
   };
-
-  const sendEmail = () => {
-    const templateParams = {
-      photography: selected.photography.join(", "),
-      videography: selected.videography.join(", "),
-      creatives: selected.creatives,
-      reels: selected.reels,
-      smm: selected.smm.join(", "),
-      branding: selected.branding,
-      addOns: selected.addOns.join(", "),
-      notes: selected.notes,
-    };
-
-    // emailjs
-    //   .send(
-    //     "YOUR_EMAILJS_SERVICE_ID",
-    //     "YOUR_TEMPLATE_ID",
-    //     templateParams,
-    //     "YOUR_PUBLIC_KEY"
-    //   )
-    //   .then(() => {
-    //     alert("Your custom plan has been submitted!");
-    //     onClose();
-    //   })
-    //   .catch((err) => {
-    //     console.error(err);
-    //     alert("Error sending email");
-    //   });
-  };
-
-  if (!isOpen) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
-        className="fixed inset-0 bg-black/60 flex justify-center items-start z-[999] py-10 backdrop-blur-3xl"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
-        {/* Modal */}
-        <motion.div
-          initial={{ scale: 0.85 }}
-          animate={{ scale: 1 }}
-          exit={{ scale: 0.85 }}
-          transition={{ duration: 0.3 }}
-          className="p-8 rounded-3xl shadow-xl relative overflow-y-auto w-[90%]"
-        >
-          {/* Close Button */}
-          <button
-            onClick={onClose}
-            className="absolute top-4 right-4 text-gray-600 text-2xl hover:text-black"
+    <div className="w-full h-fit max-w-6xl rounded-3xl p-8 shadow-xl">
+      {/* Header */}
+      <h2 className="text-3xl font-bold mb-2">Build Your Custom Package</h2>
+      <p className="mb-8">
+        Start with a base and customize everything to match your goals.
+      </p>
+
+      {/* STEP 1 – Base Package */}
+      <h3 className="text-xl font-semibold mb-4">1. Choose Your Base</h3>
+
+      <div className="grid md:grid-cols-3 gap-6">
+        {BASE_PACKAGES.map((pkg) => (
+          <div
+            key={pkg.id}
+            onClick={() => {
+              setBase(pkg);
+              setValues(pkg.defaults);
+            }}
+            className={`cursor-pointer border rounded-2xl p-6 transition-all
+              ${
+                base?.id === pkg.id
+                  ? "border-red-600 shadow-lg scale-[1.02]"
+                  : "hover:shadow-md"
+              }`}
           >
-            ✕
-          </button>
+            <h4 className="text-lg font-bold">{pkg.name}</h4>
+            <p className="text-sm mt-1">{pkg.description}</p>
+            <ul className="text-sm mt-4 space-y-1">
+              <li>{pkg.defaults.creatives} Creatives</li>
+              <li>{pkg.defaults.stories} Stories</li>
+              <li>{pkg.defaults.reels} Reels</li>
+            </ul>
+          </div>
+        ))}
+      </div>
 
-          <h2 className="text-3xl font-bold mb-6 text-center">
-            Create Your Custom Plan
-          </h2>
+      {/* STEP 2 – Customization */}
+      {base && (
+        <motion.div
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+        >
+          <h3 className="text-xl font-semibold mt-10 mb-4">
+            2. Customize Deliverables
+          </h3>
 
-          {/* Sections */}
-          <div className="space-y-10">
-            {/* Multi-select fields */}
-            {["photography", "videography", "smm", "addOns"].map((section) => (
-              <div key={section}>
-                <h3 className="font-semibold text-lg mb-3 capitalize">
-                  {section.replace(/([A-Z])/g, " $1")}
-                </h3>
-
-                <div className="grid md:grid-cols-2 gap-3">
-                  {customPlanOptions[section].map((option, i) => {
-                    const isSelected = selected[section]?.includes(option);
-                    return (
-                      <div
-                        key={i}
-                        onClick={() => toggleSelect(section, option)}
-                        className={`w-full px-4 py-2 border-b border-gray-300 focus:ring-neutral-500 outline-none duration-200 ease-in-out hover:shadow-md h-full p-3 cursor-pointer transition-all flex justify-start items-center gap-5 ${
-                          isSelected ? "bg-[#DF3F33]" : ""
-                        }`}
-                      >
-                        {isSelected ? <FaCheck /> : ""}
-                        {option}
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            ))}
-
-            {/* Single-select dropdowns */}
-            {["creatives", "reels", "branding"].map((section) => (
-              <div key={section}>
-                <h3 className="font-semibold text-lg mb-3 capitalize">
-                  {section}
-                </h3>
-
-                <select
-                  className="w-full p-3 border rounded-xl bg-gray-50"
-                  value={selected[section]}
+          <div className="grid md:grid-cols-3 gap-6">
+            {Object.entries(values).map(([key, val]) => (
+              <div key={key} className="border rounded-xl p-4">
+                <p className="font-semibold capitalize">{key}</p>
+                <input
+                  type="number"
+                  min={0}
+                  value={val}
                   onChange={(e) =>
-                    setSelected({ ...selected, [section]: e.target.value })
+                    setValues({
+                      ...values,
+                      [key]: Number(e.target.value),
+                    })
                   }
-                >
-                  <option value="">Select an option</option>
-                  {customPlanOptions[section].map((option, i) => (
-                    <option key={i}>{option}</option>
-                  ))}
-                </select>
+                  className="w-full border rounded-lg mt-2 px-3 py-2"
+                />
               </div>
             ))}
-
-            {/* Notes */}
-            <div>
-              <h3 className="font-semibold text-lg mb-3">Additional Notes</h3>
-              <textarea
-                className="w-full border rounded-xl p-4 h-28 bg-gray-50"
-                placeholder="Describe custom requirements..."
-                value={selected.notes}
-                onChange={(e) =>
-                  setSelected({ ...selected, notes: e.target.value })
-                }
-              />
-            </div>
-
-            {/* Submit */}
-            <button
-              onClick={sendEmail}
-              className="w-full py-3 bg-black text-white rounded-xl font-semibold hover:bg-gray-800 transition"
-            >
-              Submit Custom Plan
-            </button>
           </div>
         </motion.div>
-      </motion.div>
-    </AnimatePresence>
+      )}
+
+      {/* STEP 3 – Add Ons */}
+      {base && (
+        <motion.div
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+        >
+          <h3 className="text-xl font-semibold mt-10 mb-4">3. Add-Ons</h3>
+
+          <div className="flex flex-wrap gap-4">
+            {[
+              "Exclusive Reels",
+              "Influencer Collaboration",
+              "Ad Campaign Setup",
+              "Website Maintenance",
+            ].map((addon) => (
+              <button
+                key={addon}
+                onClick={() => toggleAddon(addon)}
+                className={`border px-5 py-2 rounded-full text-sm transition
+                  ${
+                    addons.includes(addon)
+                      ? "bg-red-600 text-white border-red-600"
+                      : "hover:border-red-600"
+                  }`}
+              >
+                {addon}
+              </button>
+            ))}
+          </div>
+        </motion.div>
+      )}
+
+      {/* STEP 4 – Billing */}
+      {base && (
+        <motion.div
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+        >
+          <h3 className="text-xl font-semibold mt-10 mb-4">4. Billing Type</h3>
+
+          <div className="flex gap-6">
+            {["monthly", "campaign"].map((type) => (
+              <label
+                key={type}
+                className="flex items-center gap-2 cursor-pointer"
+              >
+                <input
+                  type="radio"
+                  checked={billing === type}
+                  onChange={() => setBilling(type)}
+                />
+                <span className="capitalize">{type}</span>
+              </label>
+            ))}
+          </div>
+        </motion.div>
+      )}
+
+      {/* STEP 5 – Summary */}
+      {base && (
+        <motion.div
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+        >
+          <h3 className="text-xl font-semibold mt-10 mb-4">Package Summary</h3>
+
+          <div className="border rounded-2xl p-6 text-sm space-y-2">
+            <p>
+              <strong>Base:</strong> {base.name}
+            </p>
+            <p>
+              <strong>Deliverables:</strong>{" "}
+              {Object.entries(values)
+                .map(([k, v]) => `${v} ${k}`)
+                .join(", ")}
+            </p>
+            <p>
+              <strong>Add-Ons:</strong>{" "}
+              {addons.length ? addons.join(", ") : "None"}
+            </p>
+            <p>
+              <strong>Billing:</strong> {billing}
+            </p>
+          </div>
+        </motion.div>
+      )}
+
+      {/* CTA */}
+      {/* {base && (
+        <div className="mt-10 flex justify-center">
+          <Button
+            Label="Request Custom Package"
+            onClick={() => setOpenForm(true)}
+          />
+        </div>
+        )} */}
+      <div className="mt-10 flex justify-center gap-10">
+        <Button Label="Cancel" onClick={onClose} />
+        <Button
+          Label="Request Custom Package"
+          onClick={() => setOpenForm(true)}
+        />
+      </div>
+
+      {/* Enquiry */}
+      {/* <AnimatePresence>
+        {openForm && (
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -100 }}
+            className="fixed inset-0 bg-black/70 flex justify-center items-center z-50"
+          >
+            <EnquiryForm
+              onCancel={() => setOpenForm(false)}
+              prefillData={{
+                basePackage: base?.name,
+                values,
+                addons,
+                billing,
+              }}
+              packageClassname="block"
+            />
+          </motion.div>
+        )}
+      </AnimatePresence> */}
+    </div>
   );
 };
 
-export default CustomPlanModal;
+export default CustomPackageModal;
