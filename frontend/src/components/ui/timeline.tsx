@@ -28,7 +28,7 @@ export const Timeline = ({ data }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto lg:pt-20 md:px-8 lg:px-10">
-        <h2 className="lg:text-7xl md:text-5xl text-2xl mx-10 lg:mx-0 mb-4 text-black dark:text-neutral-400 max-w-4xl font-agile tracking-widest border-b border-[#FA2C37]">
+        <h2 className="lg:text-7xl md:text-5xl text-2xl mx-10 lg:mx-0 mb-4 text-neutral-400 max-w-4xl font-agile tracking-widest border-b border-[#FA2C37]">
           What we do...
         </h2>
         {/* <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">

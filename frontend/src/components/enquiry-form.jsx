@@ -31,7 +31,7 @@ const EnquiryForm = ({ onCancel, packageClassname = "hidden" }) => {
         Let us reach you !
       </motion.p>
 
-      <form className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6 md:gap-8 px-10">
+      <form className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6 md:gap-8 px-10 text-xs">
         {/* Animated Inputs */}
         {enquiryFormInputs.map((field, index) => (
           <motion.div
@@ -44,10 +44,10 @@ const EnquiryForm = ({ onCancel, packageClassname = "hidden" }) => {
           >
             {/* Conditional Rendering: Text Input or Dropdown */}
             {field.options ? (
-              <div className="py-4 w-full">
+              <div className="py-4 w-full ">
                 <label
                   htmlFor={field.label}
-                  className="block text-sm font-medium mb-2 ml-4 "
+                  className="block font-medium mb-2 ml-4 "
                 >
                   {field.label}
                 </label>
@@ -104,7 +104,7 @@ const EnquiryForm = ({ onCancel, packageClassname = "hidden" }) => {
           </div>
         </div>
       </form>
-      <div className="flex flex-wrap justify-center gap-6 sticky -bottom-10 md:bottom-0 w-full md:bg-transparent bg-black">
+      <div className="flex flex-wrap justify-center gap-6 k">
         <motion.div
           variants={fadeInVariant}
           initial="hidden"
