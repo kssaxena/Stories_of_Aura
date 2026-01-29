@@ -1,4 +1,5 @@
 export const bgImage = `https://ik.imagekit.io/krb6qpkbp/universe-8153526.jpg?tr=f-auto,q-70`;
+export const heroBgImage = `https://ik.imagekit.io/krb6qpkbp/mountain-hero.jpg`;
 
 export const products = [
   {
@@ -210,15 +211,15 @@ export const AccordionData = [
     logo: "https://ik.imagekit.io/krb6qpkbp/Logo/Aura%20LOGO%20white.png?updatedAt=1762107262073",
     propertyImage:
       "https://ik.imagekit.io/krb6qpkbp/Footer/footer_bg.jpg?updatedAt=1762334189213",
-    title: "Grassfield Hotels & Resorts",
+    title: "Riviera Resort",
     description: {
       intro:
-        "When Stories of Aura partnered with Grassfield Hotels & Resorts, the vision was clear  to redefine how the brand’s properties were perceived through design, storytelling, and cinematic visual representation. With two unique destinations under its banner, The Valley by Grassfield and Grassfield Riviera Resort, the goal was to highlight the individuality of each property while preserving the harmony of the Grassfield brand. Our mission was to create visuals that not only showcased spaces but also translated the feeling of being there, turning hospitality into an experience guests could sense even before arrival.",
+        "When Stories of Aura partnered with Riviera Resort, the vision was clear  to redefine how the brand’s properties were perceived through design, storytelling, and cinematic visual representation. With two unique destinations under its banner, The Valley by Grassfield and Grassfield Riviera Resort, the goal was to highlight the individuality of each property while preserving the harmony of the Grassfield brand. Our mission was to create visuals that not only showcased spaces but also translated the feeling of being there, turning hospitality into an experience guests could sense even before arrival.",
 
       sections: [
         {
           heading: "The Challenge",
-          text: "Grassfield Hotels & Resorts had two distinct properties  The Valley, known for its serene hillside ambience, and Riviera, a sophisticated urban retreat blending modern design with luxury. Their digital presence lacked emotional depth and differentiation. The visuals were not capturing their unique stories or refined guest experience. We needed to reposition their identity to highlight each property’s personality while strengthening Grassfield’s overarching tone of warmth, comfort, and class.",
+          text: "Riviera Resort had two distinct properties  The Valley, known for its serene hillside ambience, and Riviera, a sophisticated urban retreat blending modern design with luxury. Their digital presence lacked emotional depth and differentiation. The visuals were not capturing their unique stories or refined guest experience. We needed to reposition their identity to highlight each property’s personality while strengthening Grassfield’s overarching tone of warmth, comfort, and class.",
         },
         {
           heading: "Our Approach",

@@ -16,6 +16,7 @@ import Button from "../../components/button-wrapper";
 const AuraPackage = () => {
   const ref = useRef(null);
   const [showCustom, setShowCustom] = useState(false);
+  const [showCustom2, setShowCustom2] = useState(false);
   const { scrollYProgress: scrollY1 } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
@@ -93,14 +94,21 @@ const AuraPackage = () => {
         <PricingTable packageData={PackageData} />
 
         <div className="flex justify-center items-center p-5">
-          <div className=" mt-12">
+          <div className="">
             <Button
+              className="md:flex hidden"
               Label="Choose your desired package"
               onClick={() => setShowCustom(true)}
+            />
+            <Button
+              className="md:hidden"
+              Label="Choose your desired package"
+              onClick={() => setShowCustom2(true)}
             />
           </div>
         </div>
       </div>
+      {/* laptop  */}
       <AnimatePresence>
         {showCustom && (
           <motion.div
@@ -111,6 +119,21 @@ const AuraPackage = () => {
             className="overflow-hidden backdrop-blur-3xl flex justify-center items-center w-full flex-col h-fit"
           >
             <CustomPlanModal onClose={() => setShowCustom(false)} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {showCustom2 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 z-50 backdrop-blur-3xl flex justify-center items-start overflow-y-auto "
+          >
+            <div className="w-full flex justify-center mt-10 pointer-events-auto overflow-scroll">
+              <CustomPlanModal onClose={() => setShowCustom2(false)} />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

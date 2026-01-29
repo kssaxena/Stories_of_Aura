@@ -12,6 +12,7 @@ import {
   socialLinksFooter,
 } from "../../constants/ComponentConstants";
 import { useRef } from "react";
+import { heroBgImage } from "../../constants/FileConstants";
 
 const HeroSection = () => {
   // subtle mouse-follow parallax (for house/video & foreground elements)
@@ -39,7 +40,7 @@ const HeroSection = () => {
         {/* Background */}
         <div className="absolute inset-0 z-0">
           <img
-            src={mountainImage}
+            src={heroBgImage}
             alt="Mountain"
             className="w-full h-full object-cover"
           />

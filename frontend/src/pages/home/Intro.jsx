@@ -85,7 +85,7 @@ const IntroSection = () => {
           <Timeline data={TimeLineData} />
         </motion.div>
         <div className="w-fit z-10 md:py-40 py-20 ">
-          <h2 className="lg:text-7xl md:text-5xl text-2xl mx-10 lg:mx-0 mb-4 text-black dark:text-neutral-300 max-w-4xl font-agile tracking-widest border-b border-[#FA2C37] lg:ml-40 md:mx-10">
+          <h2 className="lg:text-7xl md:text-5xl text-2xl mx-10 lg:mx-0 mb-4 text-neutral-300 max-w-4xl font-agile tracking-widest border-b border-[#FA2C37] lg:ml-40 md:mx-10">
             How we do these...!
           </h2>
           <JourneyMap data={journeyMapData} />
