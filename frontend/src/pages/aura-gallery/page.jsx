@@ -1,6 +1,10 @@
 import React, { useRef, useState, useEffect, useMemo } from "react";
 import GalleryFeed from "../../components/ui/gallery-feed";
-import { bgImage, galleryImage } from "../../constants/FileConstants";
+import {
+  bgImage,
+  galleryImage,
+  FeaturedGalleryImage,
+} from "../../constants/FileConstants";
 import {
   AnimatePresence,
   motion,
@@ -45,7 +49,9 @@ const AuraGallery = () => {
   const ref = useRef(null);
 
   const shuffledImages = useMemo(() => shuffleArray(galleryImage), []);
-  const featuredImage = useMemo(() => shuffleArray(galleryImage.slice(0, 10)));
+  const featuredImage = useMemo(() =>
+    shuffleArray(FeaturedGalleryImage.slice(0, 10)),
+  );
 
   const [isLoaded, setIsLoaded] = useState(false);
 

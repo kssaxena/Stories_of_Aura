@@ -210,7 +210,7 @@ export const AccordionData = [
   {
     logo: "https://ik.imagekit.io/krb6qpkbp/Logo/Aura%20LOGO%20white.png?updatedAt=1762107262073",
     propertyImage:
-      "https://ik.imagekit.io/krb6qpkbp/Footer/footer_bg.jpg?updatedAt=1762334189213",
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208211625_0161_D.jpg",
     title: "Riviera Resort",
     description: {
       intro:
@@ -908,6 +908,63 @@ export const galleryImage = [
   {
     image:
       "https://ik.imagekit.io/krb6qpkbp/Gallery/P1081252-HDR.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+];
+export const FeaturedGalleryImage = [
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208211419_0155_D.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208211447_0157_D.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251211024645_0197_D.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208211433_0156_D.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208205504_0149_D.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208205418_0147_D.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208205515_0150_D.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208205444_0148_D.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208211625_0161_D.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208211638_0162_D.jpg?tr=f-auto,q-70,w-800",
+    propertyLink: "",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208211554_0159_D.jpg?tr=f-auto,q-70,w-800",
     propertyLink: "",
   },
 ];
