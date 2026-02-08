@@ -49,7 +49,7 @@ const AuraExperience = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, type: spring }}
-          className="font-agile lg:text-5xl md:text-5xl text-[40px] uppercase border-b border-red-500 lg:px-20 md:px-20"
+          className="font-agile lg:text-5xl md:text-5xl text-[30px] uppercase border-b border-red-500 lg:px-20 md:px-20 text-center"
         >
           {/* Aura experience */}
           Stories of Growth & Transformation
@@ -71,7 +71,7 @@ const AuraExperience = () => {
             "Dikhega toh bikega"
           </motion.span>
         </h1>
-        <h1 className="lg:w-[80rem] text-center lg:text-[22px]">
+        <h1 className="lg:w-[80rem] text-center text-[12px] lg:text-[22px]">
           Behind every growing brand lies a story worth telling. <br /> On this
           page, we share real success stories from our partner hotels, their
           challenges, transformations, and the creative journeys that turned

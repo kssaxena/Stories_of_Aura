@@ -23,7 +23,7 @@ const AccordionCard = ({ logo, propertyImage, title, description }) => {
               transition={{ duration: 0.6 }}
               src={propertyImage}
               alt={title}
-              className="w-full h-[28rem] object-cover rounded-xl"
+              className="w-full h-[10rem] md:h-[28rem] object-cover rounded-xl"
             />
           )}
           <div className="w-full flex items-center justify-between px-6 py-5 ">

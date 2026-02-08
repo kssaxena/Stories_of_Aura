@@ -123,7 +123,7 @@ const AuraContactUs = () => {
             whileInView="visible"
             // custom={1.7}
           >
-            <Button Label="Cancel" onClick={onCancel} />
+            {/* <Button Label="Cancel" onClick={onCancel} /> */}
           </motion.div>
         </div>
       </div>
@@ -169,7 +169,7 @@ const AuraContactUs = () => {
               transition={{ duration: 0.5 }}
               className="text-2xl md:text-3xl font-semibold text-center mb-10"
             >
-              We Serve In These Locations
+              Our Presence Are In These Locations
             </motion.h2>
 
             <div className="flex flex-wrap gap-6">
@@ -193,7 +193,7 @@ const AuraContactUs = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="backdrop-blur-xl bg-white/5 rounded-2xl p-8 border border-white/10 shadow-xl w-full flex justify-center items-center"
+          className="backdrop-blur-xl bg-white/5 rounded-2xl md:p-8 py-8 border border-white/10 shadow-xl w-full flex justify-center items-center"
         >
           <EnquiryForm />
           {/* <h2 className="text-2xl md:text-3xl font-semibold mb-6">

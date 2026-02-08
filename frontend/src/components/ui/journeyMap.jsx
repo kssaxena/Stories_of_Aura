@@ -87,18 +87,18 @@ const PirateJourneyMap = ({ data }) => {
               transition={{ type: "spring", stiffness: 60, damping: 25 }}
               className={`relative flex  ${
                 isLeft ? "justify-start" : "justify-end"
-              } w-fit`}
+              } w-fit h-64`}
             >
               <motion.div
                 // whileHover={{ scale: 0.5 }}
                 transition={{ type: "spring", stiffness: 200 }}
                 className={`flex flex-col md:flex-row items-center gap-8  rounded-2xl p-6 z-0 lg:w-[70%] ${
                   isLeft
-                    ? "ml-0 lg:translate-x-[-5%]"
+                    ? "ml-0 lg:translate-x-[5%]"
                     : "mr-0 lg:translate-x-[5%]"
                 }`}
               >
-                <div className="lg:w-1/2 md:w-1/2 w-full">
+                {/* <div className="lg:w-1/2 md:w-1/2 w-full">
                   <motion.img
                     whileInView={{ opacity: 1, x: 0 }}
                     initial={{ opacity: 0, x: -100 }}
@@ -107,7 +107,7 @@ const PirateJourneyMap = ({ data }) => {
                     alt={item.title}
                     className="w-full h-64 object-cover rounded-xl z-20"
                   />
-                </div>
+                </div> */}
 
                 <div className="space-y-3 lg:w-3/4 md:w-3/4 w-full">
                   <h2 className="text-2xl font-extrabold mb-2">{item.title}</h2>
@@ -125,7 +125,7 @@ const PirateJourneyMap = ({ data }) => {
                         whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 100 }}
                         transition={{ duration: 0.5, delay: 0.5 }}
-                        className="text-sm text-neutral-400"
+                        className="text-sm text-neutral-400 text-justify"
                       >
                         {text.subtext}
                       </motion.p>
