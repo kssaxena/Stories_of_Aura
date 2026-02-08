@@ -87,7 +87,7 @@ const PirateJourneyMap = ({ data }) => {
               transition={{ type: "spring", stiffness: 60, damping: 25 }}
               className={`relative flex  ${
                 isLeft ? "justify-start" : "justify-end"
-              } w-fit h-64`}
+              } w-fit md:h-64`}
             >
               <motion.div
                 // whileHover={{ scale: 0.5 }}
