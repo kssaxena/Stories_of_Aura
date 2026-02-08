@@ -49,6 +49,7 @@ const AuraGallery = () => {
   const ref = useRef(null);
 
   const shuffledImages = useMemo(() => shuffleArray(galleryImage), []);
+  // const featuredImage = useMemo(() => FeaturedGalleryImage.slice(0, 10));
   const featuredImage = useMemo(() =>
     shuffleArray(FeaturedGalleryImage.slice(0, 10)),
   );

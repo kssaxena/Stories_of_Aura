@@ -3,93 +3,93 @@ export const heroBgImage = `https://ik.imagekit.io/krb6qpkbp/mountain-hero.jpg`;
 
 export const products = [
   {
-    title: "Cat",
-    link: "https://mrsaxena.arisertradco.com",
+    title: "Property Image",
+    link: "/",
     thumbnail:
       "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC00984-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
-    title: "Cat",
-    link: "https://mrsaxena.arisertradco.com",
+    title: "Property Image",
+    link: "/",
     thumbnail:
       "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01093-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
-    title: "Cat",
-    link: "https://mrsaxena.arisertradco.com",
+    title: "Property Image",
+    link: "/",
     thumbnail:
       "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01102-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
-    title: "Cat",
-    link: "https://mrsaxena.arisertradco.com",
+    title: "Property Image",
+    link: "/",
     thumbnail:
       "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01394-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
-    title: "Cat",
-    link: "https://mrsaxena.arisertradco.com",
+    title: "Property Image",
+    link: "/",
     thumbnail:
       "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01050-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
-    title: "Cat",
-    link: "https://mrsaxena.arisertradco.com",
+    title: "Property Image",
+    link: "/",
     thumbnail:
       "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01097-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
-    title: "Cat",
-    link: "https://mrsaxena.arisertradco.com",
+    title: "Property Image",
+    link: "/",
     thumbnail:
       "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01386-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
-    title: "Cat",
-    link: "https://mrsaxena.arisertradco.com",
+    title: "Property Image",
+    link: "/",
     thumbnail:
       "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01079-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
-    title: "Cat",
-    link: "https://mrsaxena.arisertradco.com",
+    title: "Property Image",
+    link: "/",
     thumbnail:
       "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC00979-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
-    title: "Cat",
-    link: "https://mrsaxena.arisertradco.com",
+    title: "Property Image",
+    link: "/",
     thumbnail:
       "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC00995-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
-    title: "Cat",
-    link: "https://mrsaxena.arisertradco.com",
+    title: "Property Image",
+    link: "/",
     thumbnail:
       "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01089-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
-    title: "Cat",
-    link: "https://mrsaxena.arisertradco.com",
+    title: "Property Image",
+    link: "/",
     thumbnail:
       "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01110-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
-    title: "Cat",
-    link: "https://mrsaxena.arisertradco.com",
+    title: "Property Image",
+    link: "/",
     thumbnail:
       "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC00974-HDR.jpg?tr=f-auto,q-70,w-800",
   },
   {
-    title: "Cat",
-    link: "https://mrsaxena.arisertradco.com",
+    title: "Property Image",
+    link: "/",
     thumbnail:
       "https://ik.imagekit.io/krb6qpkbp/demoImages/DSC01054-HDR.jpg?tr=f-auto,q-70,w-800",
   },
 ];
 
 export const moreLinks = [
-  { name: "Carreers", path: "/carriers" },
+  { name: "Careers", path: "/careers" },
   { name: "Aura Experience", path: "/aura-experience" },
   { name: "Privacy Policy", path: "/privacy-policy" },
   { name: "Terms of Services", path: "/terms-of-services" },
@@ -135,7 +135,7 @@ export const journeyMapData = [
   {
     image:
       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?tr=f-auto,q-70,w-800",
-    title: "Step 1: Build Digital Credibility",
+    title: "Phase 1: Build Digital Credibility",
     texts: [
       {
         heading: "Reputation Management",
@@ -147,7 +147,7 @@ export const journeyMapData = [
   {
     image:
       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?tr=f-auto,q-70,w-800",
-    title: "Step 2: Strengthen Brand Trust",
+    title: "Phase 2: Strengthen Brand Trust",
     texts: [
       {
         heading: "Building and Protecting Brand Trust",
@@ -159,7 +159,7 @@ export const journeyMapData = [
   {
     image:
       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?tr=f-auto,q-70,w-800",
-    title: "Step 3: Optimize Measurable Growth",
+    title: "Phase 3: Optimize Measurable Growth",
     texts: [
       {
         heading: "Performance Marketing",
@@ -171,7 +171,7 @@ export const journeyMapData = [
   {
     image:
       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?tr=f-auto,q-70,w-800",
-    title: "Step 4: Create Seamless Experiences",
+    title: "Phase 4: Create Seamless Experiences",
     texts: [
       {
         heading: "Web Development & Coding",
@@ -183,7 +183,7 @@ export const journeyMapData = [
   {
     image:
       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?tr=f-auto,q-70,w-800",
-    title: "Step 5: Design for Recognition",
+    title: "Phase 5: Design for Recognition",
     texts: [
       {
         heading: "Branding & Designing",
@@ -195,7 +195,7 @@ export const journeyMapData = [
   {
     image:
       "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?tr=f-auto,q-70,w-800",
-    title: "Step 6: Tell Impactful Stories",
+    title: "Phase 6: Tell Impactful Stories",
     texts: [
       {
         heading: "Content Production",
@@ -210,7 +210,7 @@ export const AccordionData = [
   {
     logo: "https://ik.imagekit.io/krb6qpkbp/Logo/Aura%20LOGO%20white.png?updatedAt=1762107262073",
     propertyImage:
-      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208211625_0161_D.jpg",
+      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208205418_0147_D.jpg",
     title: "Riviera Resort",
     description: {
       intro:
@@ -911,32 +911,33 @@ export const galleryImage = [
     propertyLink: "",
   },
 ];
+
 export const FeaturedGalleryImage = [
   {
     image:
       "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208211419_0155_D.jpg?tr=f-auto,q-70,w-800",
     propertyLink: "",
   },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208211447_0157_D.jpg?tr=f-auto,q-70,w-800",
-    propertyLink: "",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251211024645_0197_D.jpg?tr=f-auto,q-70,w-800",
-    propertyLink: "",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208211433_0156_D.jpg?tr=f-auto,q-70,w-800",
-    propertyLink: "",
-  },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208205504_0149_D.jpg?tr=f-auto,q-70,w-800",
-    propertyLink: "",
-  },
+  // {
+  //   image:
+  //     "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208211447_0157_D.jpg?tr=f-auto,q-70,w-800",
+  //   propertyLink: "",
+  // },
+  // {
+  //   image:
+  //     "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251211024645_0197_D.jpg?tr=f-auto,q-70,w-800",
+  //   propertyLink: "",
+  // },
+  // {
+  //   image:
+  //     "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208211433_0156_D.jpg?tr=f-auto,q-70,w-800",
+  //   propertyLink: "",
+  // },
+  // {
+  //   image:
+  //     "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208205504_0149_D.jpg?tr=f-auto,q-70,w-800",
+  //   propertyLink: "",
+  // },
   {
     image:
       "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208205418_0147_D.jpg?tr=f-auto,q-70,w-800",
@@ -947,24 +948,143 @@ export const FeaturedGalleryImage = [
       "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208205515_0150_D.jpg?tr=f-auto,q-70,w-800",
     propertyLink: "",
   },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208205444_0148_D.jpg?tr=f-auto,q-70,w-800",
-    propertyLink: "",
-  },
+  // {
+  //   image:
+  //     "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208205444_0148_D.jpg?tr=f-auto,q-70,w-800",
+  //   propertyLink: "",
+  // },
   {
     image:
       "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208211625_0161_D.jpg?tr=f-auto,q-70,w-800",
     propertyLink: "",
   },
-  {
-    image:
-      "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208211638_0162_D.jpg?tr=f-auto,q-70,w-800",
-    propertyLink: "",
-  },
+  // {
+  //   image:
+  //     "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208211638_0162_D.jpg?tr=f-auto,q-70,w-800",
+  //   propertyLink: "",
+  // },
   {
     image:
       "https://ik.imagekit.io/krb6qpkbp/Gallery/DJI_20251208211554_0159_D.jpg?tr=f-auto,q-70,w-800",
     propertyLink: "",
+  },
+];
+
+export const privacyPolicyData = [
+  {
+    title: "Information Collected",
+    content: [
+      "Personal information such as name, phone number, and email address",
+      "Business and property information including hotel or resort details",
+      "Marketing data, creatives, briefs, and brand assets",
+      "Advertising account data from Meta, Google, and OTA platforms",
+      "Communication records and website analytics",
+    ],
+  },
+  {
+    title: "Purpose of Data Use",
+    content: [
+      "Providing marketing, advertising, branding, and consulting services",
+      "Campaign execution, reporting, and optimization",
+      "Client communication, billing, and compliance",
+      "Legal and dispute resolution purposes",
+    ],
+  },
+  {
+    title: "Third-Party Tools",
+    content: [
+      "Our services rely on third-party platforms such as Meta, Google, OTAs, CRMs, and analytics tools",
+      "We are not responsible for third-party data handling or platform policy changes",
+    ],
+  },
+  {
+    title: "Data Security & Retention",
+    content: [
+      "Reasonable safeguards are implemented, but absolute security is not guaranteed",
+      "Client data may be retained for legal, accounting, or audit purposes",
+    ],
+  },
+  {
+    title: "Policy Updates",
+    content: [
+      "This policy may be updated without prior notice",
+      "Continued use of our services constitutes acceptance",
+    ],
+  },
+];
+
+export const termsOfServiceData = [
+  {
+    title: "Scope of Services",
+    content: [
+      "Paid advertising and OTA campaigns",
+      "Influencer marketing and collaborations",
+      "Branding, content creation, and consulting",
+      "All services are provided on a best-effort basis",
+    ],
+  },
+  {
+    title: "No Performance Guarantees",
+    content: [
+      "No guarantees on bookings, revenue, ROI, or ad performance",
+      "Results depend on seasonality, pricing, budget, competition, and algorithms",
+    ],
+  },
+  {
+    title: "Fees & Payments",
+    content: [
+      "All fees are payable in advance",
+      "All payments are strictly non-refundable",
+      "Taxes apply as per Indian law",
+    ],
+  },
+  {
+    title: "Limitation of Liability",
+    content: [
+      "Maximum liability shall not exceed fees paid in the preceding 30 days",
+      "We are not liable for revenue loss, goodwill damage, or third-party failures",
+    ],
+  },
+  {
+    title: "Governing Law",
+    content: [
+      "These Terms are governed by Indian law",
+      "Courts of Ahmedabad shall have exclusive jurisdiction",
+    ],
+  },
+];
+
+export const termsAndConditionsData = [
+  {
+    title: "General Disclaimer",
+    content: [
+      "This website is provided “as is” without warranties",
+      "Content does not constitute legal or financial advice",
+    ],
+  },
+  {
+    title: "Ownership & Copyright",
+    content: [
+      "All content is the exclusive property of Stories of Aura",
+      "Unauthorized use, copying, or redistribution is prohibited",
+    ],
+  },
+  {
+    title: "Prohibited Use",
+    content: [
+      "Scraping, copying, or competitive misuse of content",
+      "Attempting unauthorized access to systems or data",
+    ],
+  },
+  {
+    title: "Third-Party Links",
+    content: [
+      "We are not responsible for external websites or tools",
+      "Use of third-party platforms is at your own risk",
+    ],
+  },
+  {
+    title: "Modifications",
+    content: ["Website terms may be updated at any time without notice"],
   },
 ];

@@ -9,6 +9,9 @@ import AuraAboutUs from "./pages/aura-about/page";
 import AuraContactUs from "./pages/aura-contact/page";
 import ScrollToTop from "./utils/scrollToTop";
 import { bgImage } from "./constants/FileConstants";
+import AuraPrivacyPolicy from "./pages/aura-privacy/page";
+import AuraTermsOfService from "./pages/aura-termsOfService/page";
+import AuraTermsAndConditions from "./pages/aura-termsAndConditions/page";
 
 function App() {
   return (
@@ -28,6 +31,12 @@ function App() {
         <Route path="/aura-packages" element={<AuraPackage />} />
         <Route path="/about-stories-of-aura" element={<AuraAboutUs />} />
         <Route path="/contact-stories-of-aura" element={<AuraContactUs />} />
+        <Route path="/privacy-policy" element={<AuraPrivacyPolicy />} />
+        <Route path="/terms-of-services" element={<AuraTermsOfService />} />
+        <Route
+          path="/terms-and-conditions"
+          element={<AuraTermsAndConditions />}
+        />
       </Routes>
       <Footer />
     </div>
